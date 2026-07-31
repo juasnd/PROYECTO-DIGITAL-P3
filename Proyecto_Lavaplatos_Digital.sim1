@@ -1,7 +1,7 @@
 <circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
 <item itemtype="Subcircuit" CircId="Mega-1" mainComp="false" Show_id="true" Show_Val="false" Pos="484,-716" rotation="0" hflip="-1" vflip="1" label="Master" idLabPos="58.598,69.164" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="true">
-<mainCompProps MainCompId="mega2560-63" Frequency="16 MHz" Program="Proyecto_Lavaplatos_Digital_Arduino_Master/build/arduino.avr.mega/Proyecto_Lavaplatos_Digital_Arduino_Master.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+<mainCompProps MainCompId="mega2560-63" Frequency="16 MHz" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
 </item>
 
 <item itemtype="LedBar" CircId="LedBar-13" mainComp="false" Show_id="false" Show_Val="false" Pos="208,-292" rotation="0" hflip="1" vflip="1" label="LedsT" idLabPos="-16,-44" labelrot="0" valLabPos="-16,-56" valLabRot="0" Color="Yellow" Size="3 _Leds" Grounded="true" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
@@ -14,7 +14,7 @@
 
 <item itemtype="Push" CircId="Push-42" mainComp="false" Show_id="false" Show_Val="false" Pos="-144,-340" rotation="0" hflip="1" vflip="1" label="Push-42" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" Key="▶" />
 
-<item itemtype="Image" CircId="Image-38" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-38" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-3" Color="#a0a0a4" Opacity="1" Image_File="../../Downloads/Proyecto_Lavaplatos_Digital-main (2)/Proyecto_Lavaplatos_Digital-main/Recursos/Lavaplatos_Cerrado.png" />
+<item itemtype="Image" CircId="Image-38" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-38" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-3" Color="#a0a0a4" Opacity="1" Image_File="IMAGENES/LAVAPLATOS_VACIO.png" />
 
 <item itemtype="LedBar" CircId="LedBar-46" mainComp="false" Show_id="false" Show_Val="false" Pos="324,-292" rotation="0" hflip="1" vflip="1" label="LedsW" idLabPos="-16,-44" labelrot="0" valLabPos="-16,-56" valLabRot="0" Color="Yellow" Size="3 _Leds" Grounded="true" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
 
@@ -212,7 +212,7 @@
 
 <item itemtype="KeyPad" CircId="KeyPad-299" mainComp="false" Show_id="false" Show_Val="false" Pos="240,-320" rotation="0" hflip="1" vflip="1" label="KeyPad-299" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2" Cols="1" Key_Labels="▲▼" />
 
-<item itemtype="Image" CircId="Image-32" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-32" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-1" Color="#a0a0a4" Opacity="1" Image_File="../../Downloads/Proyecto_Lavaplatos_Digital-main (2)/Proyecto_Lavaplatos_Digital-main/Recursos/Lavaplatos_Abierto.png" />
+<item itemtype="Image" CircId="Image-32" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-32" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-1" Color="#a0a0a4" Opacity="1" Image_File="IMAGENES/LAVAPLATOS_PLATOS_SUCIOS.png" />
 
 <item itemtype="Tunnel" CircId="Tunnel-311" mainComp="false" Show_id="false" Show_Val="false" Pos="436,-720" rotation="90" hflip="-1" vflip="1" label="Tunnel-311" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="NAF2" IsBus="false" />
 
@@ -296,7 +296,7 @@
 
 <item itemtype="Tunnel" CircId="Tunnel-1020" mainComp="false" Show_id="false" Show_Val="false" Pos="492,-692" rotation="0" hflip="-1" vflip="1" label="Tunnel-1020" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CF1" IsBus="false" />
 
-<item itemtype="Image" CircId="Image-45" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-45" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-2" Color="#a0a0a4" Opacity="1" Image_File="../../Downloads/Proyecto_Lavaplatos_Digital-main (2)/Proyecto_Lavaplatos_Digital-main/Recursos/Lavaplatos_Lleno.png" />
+<item itemtype="Image" CircId="Image-45" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-45" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-2" Color="#a0a0a4" Opacity="1" Image_File="IMAGENES/LAVAPLATOS_LAVANDO.png" />
 
 <item itemtype="Subcircuit" CircId="8x8_led_595-1022" mainComp="false" Show_id="true" Show_Val="false" Pos="-352,-228" rotation="0" hflip="1" vflip="-1" label="8x8_led_595-1022" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 

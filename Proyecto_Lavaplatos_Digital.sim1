@@ -1,0 +1,1980 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+	<item itemtype="Subcircuit" CircId="Mega-1" mainComp="false" Show_id="true" Show_Val="false" Pos="484,-716" rotation="0" hflip="-1" vflip="1" label="Master" idLabPos="58.598,69.164" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="true">
+		<mainCompProps MainCompId="mega2560-63" Frequency="16 MHz" Program="Proyecto_Lavaplatos_Digital_Arduino_Master/build/arduino.avr.mega/Proyecto_Lavaplatos_Digital_Arduino_Master.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+	</item>
+
+	<item itemtype="LedBar" CircId="LedBar-13" mainComp="false" Show_id="false" Show_Val="false" Pos="208,-292" rotation="0" hflip="1" vflip="1" label="LedsT" idLabPos="-16,-44" labelrot="0" valLabPos="-16,-56" valLabRot="0" Color="Yellow" Size="3 _Leds" Grounded="true" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+	<item itemtype="Hd44780" CircId="Hd44780-16" mainComp="false" Show_id="false" Show_Val="false" Pos="-96,-264" rotation="0" hflip="1" vflip="1" label="Pantalla" idLabPos="218.273,-13.6863" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="3" Cols="20" />
+
+	<item itemtype="TextComponent" CircId="TextComponent-35" mainComp="false" Show_id="false" Show_Val="false" Pos="340,-256" rotation="0" hflip="1" vflip="1" label="TextComponent-35" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="1 _px" Border="0 _px" Color="#000000" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#ffffff" Font_Size="15 _px" Fixed_Width="false" Text="💧" />
+
+	<item itemtype="Push" CircId="Push-41" mainComp="false" Show_id="false" Show_Val="false" Pos="-236,-340" rotation="0" hflip="1" vflip="1" label="Push-41" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" Key="⏻" />
+
+	<item itemtype="Push" CircId="Push-42" mainComp="false" Show_id="false" Show_Val="false" Pos="-144,-340" rotation="0" hflip="1" vflip="1" label="Push-42" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" Key="▶" />
+
+	<!-- IMAGEN 1: VACÍO (Apagado) -->
+	<item itemtype="Image" CircId="Image-38" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-38" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-3" Color="#a0a0a4" Opacity="1" Image_File="IMAGENES/LAVAPLATOS_VACIO.png" />
+
+	<!-- IMAGEN 2: PLATOS SUCIOS (Encendido) -->
+	<item itemtype="Image" CircId="Image-32" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-32" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-1" Color="#a0a0a4" Opacity="1" Image_File="IMAGENES/LAVA_PLATOS_PATOS_SUCIOS.png" />
+
+	<!-- IMAGEN 3: LAVANDO -->
+	<item itemtype="Image" CircId="Image-45" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-45" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-2" Color="#a0a0a4" Opacity="1" Image_File="IMAGENES/LAVAPLATOS_LAVANDO.png" />
+
+	<!-- IMAGEN 4: PLATOS LIMPIOS CERRADO (Terminado) -->
+	<item itemtype="Image" CircId="Image-999" mainComp="false" Show_id="false" Show_Val="false" Pos="60,236" rotation="0" hflip="1" vflip="1" label="Image-999" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="832 _px" V_size="1248 _px" Border="2 _px" Z_Value="-4" Color="#a0a0a4" Opacity="1" Image_File="IMAGENES/LAVAPLATOS_PLATOS_LIMPIOS_CERRADO.png" />
+
+	<item itemtype="LedBar" CircId="LedBar-46" mainComp="false" Show_id="false" Show_Val="false" Pos="324,-292" rotation="0" hflip="1" vflip="1" label="LedsW" idLabPos="-16,-44" labelrot="0" valLabPos="-16,-56" valLabRot="0" Color="Yellow" Size="3 _Leds" Grounded="true" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+	<item itemtype="Max72xx_matrix" CircId="Max72xx_matrix-49" mainComp="false" Show_id="false" Show_Val="false" Pos="-168,-104" rotation="0" hflip="1" vflip="1" label="Max72xx_matrix-49" idLabPos="-32,-58" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Blue" NumDisplays="8" />
+
+	<item itemtype="Max72xx_matrix" CircId="Max72xx_matrix-50" mainComp="false" Show_id="false" Show_Val="false" Pos="-168,68" rotation="0" hflip="1" vflip="1" label="Max72xx_matrix-50" idLabPos="-32,-58" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Blue" NumDisplays="8" />
+
+	<item itemtype="Max72xx_matrix" CircId="Max72xx_matrix-51" mainComp="false" Show_id="false" Show_Val="false" Pos="-168,252" rotation="0" hflip="1" vflip="1" label="Max72xx_matrix-51" idLabPos="-32,-58" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Blue" NumDisplays="8" />
+
+	<item itemtype="Max72xx_matrix" CircId="Max72xx_matrix-52" mainComp="false" Show_id="false" Show_Val="false" Pos="-168,432" rotation="0" hflip="1" vflip="1" label="Max72xx_matrix-52" idLabPos="-32,-58" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Blue" NumDisplays="8" />
+
+	<item itemtype="DcMotor" CircId="DcMotor-82" mainComp="false" Show_id="false" Show_Val="false" Pos="-312,-104" rotation="0" hflip="1" vflip="1" label="DcMotor-82" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="300 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+	<item itemtype="DAC" CircId="DAC-178" mainComp="false" Show_id="false" Show_Val="false" Pos="420,-924" rotation="0" hflip="1" vflip="1" label="DAC-178" idLabPos="-16,-80" labelrot="0" valLabPos="-16,20" valLabRot="0" Num_Bits="2 _bits" Vref="21 V" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" Invert_Inputs="false" pd_n="1 _Gates" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-182" mainComp="false" Show_id="false" Show_Val="false" Pos="332,-596" rotation="0" hflip="1" vflip="1" label="Tunnel-182" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="SCK" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-183" mainComp="false" Show_id="false" Show_Val="false" Pos="332,-604" rotation="0" hflip="1" vflip="1" label="Tunnel-183" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="DIN" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-184" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-588" rotation="0" hflip="1" vflip="1" label="Tunnel-184" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CS" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-189" mainComp="false" Show_id="false" Show_Val="false" Pos="-196,-56" rotation="-90" hflip="1" vflip="1" label="Tunnel-189" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="SCK" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-190" mainComp="false" Show_id="false" Show_Val="false" Pos="-188,-56" rotation="-90" hflip="1" vflip="1" label="Tunnel-190" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="DIN" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-191" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,-52" rotation="-90" hflip="1" vflip="1" label="Tunnel-191" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CS" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-192" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,120" rotation="-90" hflip="1" vflip="1" label="Tunnel-192" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CS" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-193" mainComp="false" Show_id="false" Show_Val="false" Pos="-196,116" rotation="-90" hflip="1" vflip="1" label="Tunnel-193" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="SCK" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-194" mainComp="false" Show_id="false" Show_Val="false" Pos="-188,116" rotation="-90" hflip="1" vflip="1" label="Tunnel-194" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="DIN" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-195" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,304" rotation="-90" hflip="1" vflip="1" label="Tunnel-195" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CS" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-196" mainComp="false" Show_id="false" Show_Val="false" Pos="-196,300" rotation="-90" hflip="1" vflip="1" label="Tunnel-196" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="SCK" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-197" mainComp="false" Show_id="false" Show_Val="false" Pos="-188,300" rotation="-90" hflip="1" vflip="1" label="Tunnel-197" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="DIN" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-198" mainComp="false" Show_id="false" Show_Val="false" Pos="-196,480" rotation="-90" hflip="1" vflip="1" label="Tunnel-198" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="SCK" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-199" mainComp="false" Show_id="false" Show_Val="false" Pos="-188,480" rotation="-90" hflip="1" vflip="1" label="Tunnel-199" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="DIN" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-200" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,484" rotation="-90" hflip="1" vflip="1" label="Tunnel-200" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CS" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-202" mainComp="false" Show_id="false" Show_Val="false" Pos="-272,-104" rotation="-630" hflip="-1" vflip="1" label="Tunnel-202" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-203" mainComp="false" Show_id="false" Show_Val="false" Pos="-352,-104" rotation="90" hflip="1" vflip="1" label="Tunnel-203" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="M_OUT" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-204" mainComp="false" Show_id="false" Show_Val="false" Pos="-352,68" rotation="90" hflip="1" vflip="1" label="Tunnel-204" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="M_OUT" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-205" mainComp="false" Show_id="false" Show_Val="false" Pos="-272,64" rotation="-630" hflip="-1" vflip="1" label="Tunnel-205" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="DcMotor" CircId="DcMotor-206" mainComp="false" Show_id="false" Show_Val="false" Pos="-312,68" rotation="0" hflip="1" vflip="1" label="DcMotor-206" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="300 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-207" mainComp="false" Show_id="false" Show_Val="false" Pos="-348,252" rotation="90" hflip="1" vflip="1" label="Tunnel-207" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="M_OUT" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-208" mainComp="false" Show_id="false" Show_Val="false" Pos="-268,248" rotation="-630" hflip="-1" vflip="1" label="Tunnel-208" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="DcMotor" CircId="DcMotor-209" mainComp="false" Show_id="false" Show_Val="false" Pos="-308,252" rotation="0" hflip="1" vflip="1" label="DcMotor-209" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="300 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-210" mainComp="false" Show_id="false" Show_Val="false" Pos="-344,432" rotation="90" hflip="1" vflip="1" label="Tunnel-210" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="M_OUT" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-211" mainComp="false" Show_id="false" Show_Val="false" Pos="-264,428" rotation="-630" hflip="-1" vflip="1" label="Tunnel-211" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="DcMotor" CircId="DcMotor-212" mainComp="false" Show_id="false" Show_Val="false" Pos="-304,432" rotation="0" hflip="1" vflip="1" label="DcMotor-212" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="300 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-213" mainComp="false" Show_id="false" Show_Val="false" Pos="408,-104" rotation="90" hflip="1" vflip="1" label="Tunnel-213" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="M_OUT" IsBus="false" />
+
+	<item itemtype="DcMotor" CircId="DcMotor-214" mainComp="false" Show_id="false" Show_Val="false" Pos="452,252" rotation="0" hflip="1" vflip="1" label="DcMotor-214" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="300 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-215" mainComp="false" Show_id="false" Show_Val="false" Pos="492,252" rotation="-630" hflip="-1" vflip="1" label="Tunnel-215" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="DcMotor" CircId="DcMotor-216" mainComp="false" Show_id="false" Show_Val="false" Pos="448,68" rotation="0" hflip="1" vflip="1" label="DcMotor-216" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="300 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+	<item itemtype="DcMotor" CircId="DcMotor-217" mainComp="false" Show_id="false" Show_Val="false" Pos="456,432" rotation="0" hflip="1" vflip="1" label="DcMotor-217" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="300 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-218" mainComp="false" Show_id="false" Show_Val="false" Pos="412,252" rotation="90" hflip="1" vflip="1" label="Tunnel-218" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="M_OUT" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-219" mainComp="false" Show_id="false" Show_Val="false" Pos="488,64" rotation="-630" hflip="-1" vflip="1" label="Tunnel-219" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-220" mainComp="false" Show_id="false" Show_Val="false" Pos="488,-104" rotation="-630" hflip="-1" vflip="1" label="Tunnel-220" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-221" mainComp="false" Show_id="false" Show_Val="false" Pos="416,432" rotation="90" hflip="1" vflip="1" label="Tunnel-221" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="M_OUT" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-222" mainComp="false" Show_id="false" Show_Val="false" Pos="500,432" rotation="-630" hflip="-1" vflip="1" label="Tunnel-222" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-223" mainComp="false" Show_id="false" Show_Val="false" Pos="408,68" rotation="90" hflip="1" vflip="1" label="Tunnel-223" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="M_OUT" IsBus="false" />
+
+	<item itemtype="DcMotor" CircId="DcMotor-224" mainComp="false" Show_id="false" Show_Val="false" Pos="448,-104" rotation="0" hflip="1" vflip="1" label="DcMotor-224" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="300 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-226" mainComp="false" Show_id="false" Show_Val="false" Pos="332,-548" rotation="-720" hflip="1" vflip="1" label="Tunnel-226" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-230" mainComp="false" Show_id="false" Show_Val="false" Pos="396,-924" rotation="0" hflip="1" vflip="1" label="Tunnel-230" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D0" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-231" mainComp="false" Show_id="false" Show_Val="false" Pos="396,-916" rotation="0" hflip="1" vflip="1" label="Tunnel-231" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-237" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-612" rotation="0" hflip="1" vflip="1" label="Tunnel-237" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-238" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-620" rotation="0" hflip="1" vflip="1" label="Tunnel-238" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D0" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-229" mainComp="false" Show_id="false" Show_Val="false" Pos="444,-924" rotation="360" hflip="-1" vflip="-1" label="Tunnel-229" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="M_OUT" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-253" mainComp="false" Show_id="false" Show_Val="false" Pos="-252,-340" rotation="0" hflip="1" vflip="1" label="Tunnel-253" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ON" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-254" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-628" rotation="0" hflip="1" vflip="1" label="Tunnel-254" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ON" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-255" mainComp="false" Show_id="false" Show_Val="false" Pos="-220,-340" rotation="0" hflip="-1" vflip="1" label="Tunnel-255" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="5V" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-256" mainComp="false" Show_id="false" Show_Val="false" Pos="-160,-340" rotation="0" hflip="1" vflip="1" label="Tunnel-256" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="Start" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-257" mainComp="false" Show_id="false" Show_Val="false" Pos="-128,-340" rotation="0" hflip="-1" vflip="1" label="Tunnel-257" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="5V" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-258" mainComp="false" Show_id="false" Show_Val="false" Pos="336,-636" rotation="0" hflip="1" vflip="1" label="Tunnel-258" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="Start" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-262" mainComp="false" Show_id="false" Show_Val="false" Pos="-72,-260" rotation="-90" hflip="-1" vflip="1" label="Tunnel-262" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-263" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-564" rotation="0" hflip="1" vflip="1" label="Tunnel-263" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="5V" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-264" mainComp="false" Show_id="false" Show_Val="false" Pos="-80,-256" rotation="-90" hflip="1" vflip="1" label="Tunnel-264" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="RS" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-265" mainComp="false" Show_id="false" Show_Val="false" Pos="-64,-256" rotation="-90" hflip="1" vflip="1" label="Tunnel-265" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="En" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-266" mainComp="false" Show_id="false" Show_Val="false" Pos="-16,-256" rotation="-90" hflip="1" vflip="1" label="Tunnel-266" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D5" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-267" mainComp="false" Show_id="false" Show_Val="false" Pos="-8,-256" rotation="-90" hflip="1" vflip="1" label="Tunnel-267" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D6" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-268" mainComp="false" Show_id="false" Show_Val="false" Pos="-24,-256" rotation="-90" hflip="1" vflip="1" label="Tunnel-268" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D4" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-269" mainComp="false" Show_id="false" Show_Val="false" Pos="0,-256" rotation="-90" hflip="1" vflip="1" label="Tunnel-269" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D7" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-276" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-652" rotation="0" hflip="1" vflip="1" label="Tunnel-276" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D7" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-277" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-676" rotation="0" hflip="1" vflip="1" label="Tunnel-277" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D4" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-278" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-684" rotation="0" hflip="1" vflip="1" label="Tunnel-278" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="En" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-279" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-660" rotation="0" hflip="1" vflip="1" label="Tunnel-279" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D6" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-280" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-668" rotation="0" hflip="1" vflip="1" label="Tunnel-280" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="D5" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-281" mainComp="false" Show_id="false" Show_Val="false" Pos="328,-692" rotation="0" hflip="1" vflip="1" label="Tunnel-281" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="RS" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-283" mainComp="false" Show_id="false" Show_Val="false" Pos="192,-300" rotation="0" hflip="1" vflip="1" label="Tunnel-283" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="T1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-284" mainComp="false" Show_id="false" Show_Val="false" Pos="192,-308" rotation="0" hflip="1" vflip="1" label="Tunnel-284" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="T2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-285" mainComp="false" Show_id="false" Show_Val="false" Pos="192,-316" rotation="0" hflip="1" vflip="1" label="Tunnel-285" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="T3" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-286" mainComp="false" Show_id="false" Show_Val="false" Pos="308,-316" rotation="0" hflip="1" vflip="1" label="Tunnel-286" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="N3" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-287" mainComp="false" Show_id="false" Show_Val="false" Pos="308,-308" rotation="0" hflip="1" vflip="1" label="Tunnel-287" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="N2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-288" mainComp="false" Show_id="false" Show_Val="false" Pos="308,-300" rotation="0" hflip="1" vflip="1" label="Tunnel-288" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="N1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-289" mainComp="false" Show_id="false" Show_Val="false" Pos="356,-728" rotation="90" hflip="1" vflip="1" label="Tunnel-289" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="T2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-290" mainComp="false" Show_id="false" Show_Val="false" Pos="348,-728" rotation="90" hflip="1" vflip="1" label="Tunnel-290" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="T1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-291" mainComp="false" Show_id="false" Show_Val="false" Pos="364,-728" rotation="90" hflip="1" vflip="1" label="Tunnel-291" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="T3" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-292" mainComp="false" Show_id="false" Show_Val="false" Pos="372,-728" rotation="90" hflip="1" vflip="1" label="Tunnel-292" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="N1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-293" mainComp="false" Show_id="false" Show_Val="false" Pos="380,-728" rotation="90" hflip="1" vflip="1" label="Tunnel-293" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="N2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-294" mainComp="false" Show_id="false" Show_Val="false" Pos="388,-728" rotation="90" hflip="1" vflip="1" label="Tunnel-294" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="N3" IsBus="false" />
+
+	<item itemtype="TextComponent" CircId="TextComponent-300" mainComp="false" Show_id="false" Show_Val="false" Pos="228,-256" rotation="0" hflip="1" vflip="1" label="TextComponent-300" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="1 _px" Border="0 _px" Color="#000000" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#ffffff" Font_Size="15 _px" Fixed_Width="false" Text="°C" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-301" mainComp="false" Show_id="false" Show_Val="false" Pos="240,-280" rotation="-90" hflip="1" vflip="1" label="TEMPERATURA COLUMNA 1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="TC1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-302" mainComp="false" Show_id="false" Show_Val="false" Pos="256,-312" rotation="0" hflip="-1" vflip="1" label="TEMPERATURA FILA 1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="TF1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-304" mainComp="false" Show_id="false" Show_Val="false" Pos="352,-284" rotation="-90" hflip="1" vflip="1" label="NIVEL AGUA COLUMNA 1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="NAC1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-305" mainComp="false" Show_id="false" Show_Val="false" Pos="368,-312" rotation="0" hflip="-1" vflip="1" label="NIVEL AGUA FILA 1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="NAF1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-307" mainComp="false" Show_id="false" Show_Val="false" Pos="396,-724" rotation="90" hflip="-1" vflip="1" label="Tunnel-307" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="TC1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-309" mainComp="false" Show_id="false" Show_Val="false" Pos="404,-724" rotation="90" hflip="-1" vflip="1" label="Tunnel-309" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="TF1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-310" mainComp="false" Show_id="false" Show_Val="false" Pos="420,-720" rotation="90" hflip="-1" vflip="1" label="Tunnel-310" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="NAC1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-312" mainComp="false" Show_id="false" Show_Val="false" Pos="428,-720" rotation="90" hflip="-1" vflip="1" label="Tunnel-312" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="NAF1" IsBus="false" />
+
+	<item itemtype="AudioOut" CircId="AudioOut-313" mainComp="false" Show_id="false" Show_Val="false" Pos="-400,-308" rotation="0" hflip="1" vflip="1" label="AudioOut-313" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" Frequency="1 kHz" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-314" mainComp="false" Show_id="false" Show_Val="false" Pos="-432,-316" rotation="0" hflip="1" vflip="1" label="Tunnel-314" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="Pin9" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-315" mainComp="false" Show_id="false" Show_Val="false" Pos="444,-720" rotation="90" hflip="-1" vflip="1" label="Tunnel-315" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="Pin9" IsBus="false" />
+
+	<item itemtype="Ground" CircId="Ground-316" mainComp="false" Show_id="false" Show_Val="false" Pos="-428,-292" rotation="0" hflip="1" vflip="1" label="Ground-316" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+	<item itemtype="KeyPad" CircId="KeyPad-33" mainComp="false" Show_id="false" Show_Val="false" Pos="352,-320" rotation="0" hflip="1" vflip="1" label="AguaNivel" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2" Cols="1" Key_Labels="▲▼" />
+
+	<item itemtype="KeyPad" CircId="KeyPad-299" mainComp="false" Show_id="false" Show_Val="false" Pos="240,-320" rotation="0" hflip="1" vflip="1" label="KeyPad-299" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2" Cols="1" Key_Labels="▲▼" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-311" mainComp="false" Show_id="false" Show_Val="false" Pos="436,-720" rotation="90" hflip="-1" vflip="1" label="Tunnel-311" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="NAF2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-308" mainComp="false" Show_id="false" Show_Val="false" Pos="412,-724" rotation="90" hflip="-1" vflip="1" label="Tunnel-308" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="TF2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-317" mainComp="false" Show_id="false" Show_Val="false" Pos="256,-296" rotation="0" hflip="-1" vflip="1" label="Tunnel-317" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="TF2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-318" mainComp="false" Show_id="false" Show_Val="false" Pos="368,-296" rotation="0" hflip="-1" vflip="1" label="Tunnel-318" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="NAF2" IsBus="false" />
+
+	<item itemtype="LedBar" CircId="LedBar-321" mainComp="false" Show_id="false" Show_Val="false" Pos="336,-128" rotation="0" hflip="1" vflip="1" label="LedBar-321" idLabPos="-16,-44" labelrot="0" valLabPos="-16,-56" valLabRot="0" Color="Blue" Size="80 _Leds" Grounded="true" Threshold="5 V" MaxCurrent="30 mA" Resistance="100 Ω" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-324" mainComp="false" Show_id="false" Show_Val="false" Pos="452,-724" rotation="90" hflip="-1" vflip="1" label="Tunnel-324" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-414" mainComp="false" Show_id="false" Show_Val="false" Pos="404,-956" rotation="0" hflip="1" vflip="1" label="Tunnel-414" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST2" IsBus="false" />
+
+	<item itemtype="RelaySPST" CircId="RelaySPST-331" mainComp="false" Show_id="false" Show_Val="false" Pos="420,-956" rotation="0" hflip="1" vflip="1" label="RelaySPST-331" idLabPos="-16,8" labelrot="0" valLabPos="-16,6" valLabRot="0" Norm_Close="false" DT="false" Poles="1" IOn="20 mA" IOff="10 mA" Inductance="100 mH" Rcoil="100 Ω" ReaStep="0 ns" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-416" mainComp="false" Show_id="false" Show_Val="false" Pos="440,-956" rotation="-720" hflip="-1" vflip="1" label="Tunnel-416" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-417" mainComp="false" Show_id="false" Show_Val="false" Pos="436,-1016" rotation="0" hflip="-1" vflip="1" label="Tunnel-417" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="V" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-418" mainComp="false" Show_id="false" Show_Val="false" Pos="436,-972" rotation="0" hflip="-1" vflip="1" label="Tunnel-418" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST2_2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-420" mainComp="false" Show_id="false" Show_Val="false" Pos="396,-972" rotation="0" hflip="1" vflip="1" label="Tunnel-420" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="V" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-421" mainComp="false" Show_id="false" Show_Val="false" Pos="320,-160" rotation="90" hflip="1" vflip="1" label="Tunnel-421" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST1_1" IsBus="false" />
+
+	<item itemtype="Fixed Voltage" CircId="Fixed Voltage-419" mainComp="false" Show_id="false" Show_Val="false" Pos="420,-1016" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-419" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="9 V" Out="true" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-585" mainComp="false" Show_id="false" Show_Val="false" Pos="540,-956" rotation="-720" hflip="-1" vflip="1" label="Tunnel-585" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-586" mainComp="false" Show_id="false" Show_Val="false" Pos="504,-956" rotation="0" hflip="1" vflip="1" label="Tunnel-586" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST3" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-587" mainComp="false" Show_id="false" Show_Val="false" Pos="496,-972" rotation="0" hflip="1" vflip="1" label="Tunnel-587" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="V" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-588" mainComp="false" Show_id="false" Show_Val="false" Pos="536,-972" rotation="0" hflip="-1" vflip="1" label="Tunnel-588" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST3_3" IsBus="false" />
+
+	<item itemtype="RelaySPST" CircId="RelaySPST-589" mainComp="false" Show_id="false" Show_Val="false" Pos="520,-956" rotation="0" hflip="1" vflip="1" label="RelaySPST-589" idLabPos="-16,8" labelrot="0" valLabPos="-16,6" valLabRot="0" Norm_Close="false" DT="false" Poles="1" IOn="20 mA" IOff="10 mA" Inductance="100 mH" Rcoil="100 Ω" ReaStep="0 ns" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-590" mainComp="false" Show_id="false" Show_Val="false" Pos="336,-956" rotation="-720" hflip="-1" vflip="1" label="Tunnel-590" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="GND" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-591" mainComp="false" Show_id="false" Show_Val="false" Pos="300,-956" rotation="0" hflip="1" vflip="1" label="Tunnel-591" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-592" mainComp="false" Show_id="false" Show_Val="false" Pos="292,-972" rotation="0" hflip="1" vflip="1" label="Tunnel-592" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="V" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-593" mainComp="false" Show_id="false" Show_Val="false" Pos="332,-972" rotation="0" hflip="-1" vflip="1" label="Tunnel-593" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST1_1" IsBus="false" />
+
+	<item itemtype="RelaySPST" CircId="RelaySPST-594" mainComp="false" Show_id="false" Show_Val="false" Pos="316,-956" rotation="0" hflip="1" vflip="1" label="RelaySPST-594" idLabPos="-16,8" labelrot="0" valLabPos="-16,6" valLabRot="0" Norm_Close="false" DT="false" Poles="1" IOn="20 mA" IOff="10 mA" Inductance="100 mH" Rcoil="100 Ω" ReaStep="0 ns" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-595" mainComp="false" Show_id="false" Show_Val="false" Pos="460,-724" rotation="90" hflip="1" vflip="1" label="Tunnel-595" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-596" mainComp="false" Show_id="false" Show_Val="false" Pos="468,-724" rotation="90" hflip="1" vflip="1" label="Tunnel-596" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST3" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-666" mainComp="false" Show_id="false" Show_Val="false" Pos="344,-160" rotation="90" hflip="1" vflip="1" label="Tunnel-666" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST2_2" IsBus="false" />
+
+	<item itemtype="LedBar" CircId="LedBar-668" mainComp="false" Show_id="false" Show_Val="false" Pos="360,-128" rotation="0" hflip="1" vflip="1" label="LedBar-668" idLabPos="-16,-44" labelrot="0" valLabPos="-16,-56" valLabRot="0" Color="Yellow" Size="80 _Leds" Grounded="true" Threshold="5 V" MaxCurrent="30 mA" Resistance="100 Ω" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-887" mainComp="false" Show_id="false" Show_Val="false" Pos="368,-160" rotation="90" hflip="1" vflip="1" label="Tunnel-887" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ST3_3" IsBus="false" />
+
+	<item itemtype="LedBar" CircId="LedBar-992" mainComp="false" Show_id="false" Show_Val="false" Pos="384,-128" rotation="0" hflip="1" vflip="1" label="LedBar-992" idLabPos="-16,-44" labelrot="0" valLabPos="-16,-56" valLabRot="0" Color="Red" Size="80 _Leds" Grounded="true" Threshold="1.8 V" MaxCurrent="30 mA" Resistance="100 Ω" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1010" mainComp="false" Show_id="false" Show_Val="false" Pos="-236,-268" rotation="-90" hflip="1" vflip="1" label="Tunnel-1010" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CC1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1011" mainComp="false" Show_id="false" Show_Val="false" Pos="-220,-300" rotation="0" hflip="-1" vflip="1" label="Tunnel-1011" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CF1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1012" mainComp="false" Show_id="false" Show_Val="false" Pos="-220,-284" rotation="0" hflip="-1" vflip="1" label="Tunnel-1012" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CF2" IsBus="false" />
+
+	<item itemtype="KeyPad" CircId="KeyPad-1013" mainComp="false" Show_id="false" Show_Val="false" Pos="-236,-308" rotation="0" hflip="1" vflip="1" label="KeyPad-1013" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2" Cols="1" Key_Labels="▲▼" />
+
+	<item itemtype="Push" CircId="Push-1014" mainComp="false" Show_id="false" Show_Val="false" Pos="-144,-304" rotation="0" hflip="1" vflip="1" label="Push-1014" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" Key="⚙" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1015" mainComp="false" Show_id="false" Show_Val="false" Pos="-128,-304" rotation="0" hflip="-1" vflip="1" label="Tunnel-1015" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="5V" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1016" mainComp="false" Show_id="false" Show_Val="false" Pos="-160,-304" rotation="0" hflip="1" vflip="1" label="Tunnel-1016" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="Config" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1017" mainComp="false" Show_id="false" Show_Val="false" Pos="300,-644" rotation="0" hflip="1" vflip="1" label="Tunnel-1017" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="Config" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1018" mainComp="false" Show_id="false" Show_Val="false" Pos="492,-700" rotation="0" hflip="-1" vflip="1" label="Tunnel-1018" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CC1" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1019" mainComp="false" Show_id="false" Show_Val="false" Pos="492,-684" rotation="0" hflip="-1" vflip="1" label="Tunnel-1019" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CF2" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1020" mainComp="false" Show_id="false" Show_Val="false" Pos="492,-692" rotation="0" hflip="-1" vflip="1" label="Tunnel-1020" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="CF1" IsBus="false" />
+
+	<item itemtype="Subcircuit" CircId="8x8_led_595-1022" mainComp="false" Show_id="true" Show_Val="false" Pos="-352,-228" rotation="0" hflip="1" vflip="-1" label="8x8_led_595-1022" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1023" mainComp="false" Show_id="false" Show_Val="false" Pos="496,-628" rotation="0" hflip="-1" vflip="1" label="Tunnel-1023" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="DataIN" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1024" mainComp="false" Show_id="false" Show_Val="false" Pos="-344,-328" rotation="90" hflip="-1" vflip="1" label="Tunnel-1024" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="DataIN" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1025" mainComp="false" Show_id="false" Show_Val="false" Pos="500,-620" rotation="0" hflip="-1" vflip="1" label="Tunnel-1025" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="SCLK" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1026" mainComp="false" Show_id="false" Show_Val="false" Pos="-336,-332" rotation="-90" hflip="-1" vflip="-1" label="Tunnel-1026" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="SCLK" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1027" mainComp="false" Show_id="false" Show_Val="false" Pos="500,-612" rotation="0" hflip="-1" vflip="1" label="Tunnel-1027" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="RCLK" IsBus="false" />
+
+	<item itemtype="Tunnel" CircId="Tunnel-1028" mainComp="false" Show_id="false" Show_Val="false" Pos="-328,-332" rotation="-90" hflip="-1" vflip="-1" label="Tunnel-1028" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="RCLK" IsBus="false" />
+
+	<item itemtype="Node" CircId="Node-335" mainComp="false" Pos="320,-144" />
+
+	<item itemtype="Node" CircId="Node-336" mainComp="false" Pos="320,-136" />
+
+	<item itemtype="Node" CircId="Node-337" mainComp="false" Pos="320,-128" />
+
+	<item itemtype="Node" CircId="Node-338" mainComp="false" Pos="320,-120" />
+
+	<item itemtype="Node" CircId="Node-339" mainComp="false" Pos="320,-112" />
+
+	<item itemtype="Node" CircId="Node-340" mainComp="false" Pos="320,-104" />
+
+	<item itemtype="Node" CircId="Node-341" mainComp="false" Pos="320,-96" />
+
+	<item itemtype="Node" CircId="Node-342" mainComp="false" Pos="320,-88" />
+
+	<item itemtype="Node" CircId="Node-343" mainComp="false" Pos="320,-80" />
+
+	<item itemtype="Node" CircId="Node-344" mainComp="false" Pos="320,-72" />
+
+	<item itemtype="Node" CircId="Node-345" mainComp="false" Pos="320,-64" />
+
+	<item itemtype="Node" CircId="Node-346" mainComp="false" Pos="320,-56" />
+
+	<item itemtype="Node" CircId="Node-347" mainComp="false" Pos="320,-48" />
+
+	<item itemtype="Node" CircId="Node-348" mainComp="false" Pos="320,-40" />
+
+	<item itemtype="Node" CircId="Node-349" mainComp="false" Pos="320,-32" />
+
+	<item itemtype="Node" CircId="Node-350" mainComp="false" Pos="320,-24" />
+
+	<item itemtype="Node" CircId="Node-351" mainComp="false" Pos="320,-16" />
+
+	<item itemtype="Node" CircId="Node-352" mainComp="false" Pos="320,-8" />
+
+	<item itemtype="Node" CircId="Node-353" mainComp="false" Pos="320,0" />
+
+	<item itemtype="Node" CircId="Node-354" mainComp="false" Pos="320,8" />
+
+	<item itemtype="Node" CircId="Node-355" mainComp="false" Pos="320,16" />
+
+	<item itemtype="Node" CircId="Node-356" mainComp="false" Pos="320,24" />
+
+	<item itemtype="Node" CircId="Node-357" mainComp="false" Pos="320,32" />
+
+	<item itemtype="Node" CircId="Node-358" mainComp="false" Pos="320,40" />
+
+	<item itemtype="Node" CircId="Node-359" mainComp="false" Pos="320,48" />
+
+	<item itemtype="Node" CircId="Node-360" mainComp="false" Pos="320,56" />
+
+	<item itemtype="Node" CircId="Node-361" mainComp="false" Pos="320,64" />
+
+	<item itemtype="Node" CircId="Node-362" mainComp="false" Pos="320,72" />
+
+	<item itemtype="Node" CircId="Node-363" mainComp="false" Pos="320,80" />
+
+	<item itemtype="Node" CircId="Node-364" mainComp="false" Pos="320,88" />
+
+	<item itemtype="Node" CircId="Node-365" mainComp="false" Pos="320,96" />
+
+	<item itemtype="Node" CircId="Node-366" mainComp="false" Pos="320,104" />
+
+	<item itemtype="Node" CircId="Node-367" mainComp="false" Pos="320,112" />
+
+	<item itemtype="Node" CircId="Node-368" mainComp="false" Pos="320,120" />
+
+	<item itemtype="Node" CircId="Node-369" mainComp="false" Pos="320,128" />
+
+	<item itemtype="Node" CircId="Node-370" mainComp="false" Pos="320,136" />
+
+	<item itemtype="Node" CircId="Node-371" mainComp="false" Pos="320,144" />
+
+	<item itemtype="Node" CircId="Node-372" mainComp="false" Pos="320,152" />
+
+	<item itemtype="Node" CircId="Node-373" mainComp="false" Pos="320,160" />
+
+	<item itemtype="Node" CircId="Node-374" mainComp="false" Pos="320,168" />
+
+	<item itemtype="Node" CircId="Node-375" mainComp="false" Pos="320,176" />
+
+	<item itemtype="Node" CircId="Node-376" mainComp="false" Pos="320,184" />
+
+	<item itemtype="Node" CircId="Node-377" mainComp="false" Pos="320,192" />
+
+	<item itemtype="Node" CircId="Node-378" mainComp="false" Pos="320,200" />
+
+	<item itemtype="Node" CircId="Node-379" mainComp="false" Pos="320,208" />
+
+	<item itemtype="Node" CircId="Node-380" mainComp="false" Pos="320,216" />
+
+	<item itemtype="Node" CircId="Node-381" mainComp="false" Pos="320,224" />
+
+	<item itemtype="Node" CircId="Node-382" mainComp="false" Pos="320,232" />
+
+	<item itemtype="Node" CircId="Node-383" mainComp="false" Pos="320,240" />
+
+	<item itemtype="Node" CircId="Node-384" mainComp="false" Pos="320,248" />
+
+	<item itemtype="Node" CircId="Node-385" mainComp="false" Pos="320,256" />
+
+	<item itemtype="Node" CircId="Node-386" mainComp="false" Pos="320,264" />
+
+	<item itemtype="Node" CircId="Node-387" mainComp="false" Pos="320,272" />
+
+	<item itemtype="Node" CircId="Node-388" mainComp="false" Pos="320,280" />
+
+	<item itemtype="Node" CircId="Node-389" mainComp="false" Pos="320,288" />
+
+	<item itemtype="Node" CircId="Node-390" mainComp="false" Pos="320,296" />
+
+	<item itemtype="Node" CircId="Node-391" mainComp="false" Pos="320,304" />
+
+	<item itemtype="Node" CircId="Node-392" mainComp="false" Pos="320,312" />
+
+	<item itemtype="Node" CircId="Node-393" mainComp="false" Pos="320,320" />
+
+	<item itemtype="Node" CircId="Node-394" mainComp="false" Pos="320,328" />
+
+	<item itemtype="Node" CircId="Node-395" mainComp="false" Pos="320,336" />
+
+	<item itemtype="Node" CircId="Node-396" mainComp="false" Pos="320,344" />
+
+	<item itemtype="Node" CircId="Node-397" mainComp="false" Pos="320,352" />
+
+	<item itemtype="Node" CircId="Node-398" mainComp="false" Pos="320,360" />
+
+	<item itemtype="Node" CircId="Node-399" mainComp="false" Pos="320,368" />
+
+	<item itemtype="Node" CircId="Node-400" mainComp="false" Pos="320,376" />
+
+	<item itemtype="Node" CircId="Node-401" mainComp="false" Pos="320,384" />
+
+	<item itemtype="Node" CircId="Node-402" mainComp="false" Pos="320,392" />
+
+	<item itemtype="Node" CircId="Node-403" mainComp="false" Pos="320,400" />
+
+	<item itemtype="Node" CircId="Node-404" mainComp="false" Pos="320,408" />
+
+	<item itemtype="Node" CircId="Node-405" mainComp="false" Pos="320,416" />
+
+	<item itemtype="Node" CircId="Node-406" mainComp="false" Pos="320,424" />
+
+	<item itemtype="Node" CircId="Node-407" mainComp="false" Pos="320,432" />
+
+	<item itemtype="Node" CircId="Node-408" mainComp="false" Pos="320,440" />
+
+	<item itemtype="Node" CircId="Node-409" mainComp="false" Pos="320,448" />
+
+	<item itemtype="Node" CircId="Node-410" mainComp="false" Pos="320,456" />
+
+	<item itemtype="Node" CircId="Node-411" mainComp="false" Pos="320,464" />
+
+	<item itemtype="Node" CircId="Node-412" mainComp="false" Pos="320,472" />
+
+	<item itemtype="Node" CircId="Node-422" mainComp="false" Pos="320,-148" />
+
+	<item itemtype="Node" CircId="Node-597" mainComp="false" Pos="344,48" />
+
+	<item itemtype="Node" CircId="Node-598" mainComp="false" Pos="344,312" />
+
+	<item itemtype="Node" CircId="Node-599" mainComp="false" Pos="344,16" />
+
+	<item itemtype="Node" CircId="Node-600" mainComp="false" Pos="344,264" />
+
+	<item itemtype="Node" CircId="Node-601" mainComp="false" Pos="344,384" />
+
+	<item itemtype="Node" CircId="Node-602" mainComp="false" Pos="344,200" />
+
+	<item itemtype="Node" CircId="Node-603" mainComp="false" Pos="344,224" />
+
+	<item itemtype="Node" CircId="Node-604" mainComp="false" Pos="344,120" />
+
+	<item itemtype="Node" CircId="Node-605" mainComp="false" Pos="344,288" />
+
+	<item itemtype="Node" CircId="Node-606" mainComp="false" Pos="344,-112" />
+
+	<item itemtype="Node" CircId="Node-607" mainComp="false" Pos="344,464" />
+
+	<item itemtype="Node" CircId="Node-608" mainComp="false" Pos="344,432" />
+
+	<item itemtype="Node" CircId="Node-609" mainComp="false" Pos="344,176" />
+
+	<item itemtype="Node" CircId="Node-610" mainComp="false" Pos="344,184" />
+
+	<item itemtype="Node" CircId="Node-611" mainComp="false" Pos="344,320" />
+
+	<item itemtype="Node" CircId="Node-612" mainComp="false" Pos="344,360" />
+
+	<item itemtype="Node" CircId="Node-613" mainComp="false" Pos="344,304" />
+
+	<item itemtype="Node" CircId="Node-614" mainComp="false" Pos="344,24" />
+
+	<item itemtype="Node" CircId="Node-615" mainComp="false" Pos="344,-80" />
+
+	<item itemtype="Node" CircId="Node-616" mainComp="false" Pos="344,208" />
+
+	<item itemtype="Node" CircId="Node-617" mainComp="false" Pos="344,128" />
+
+	<item itemtype="Node" CircId="Node-618" mainComp="false" Pos="344,56" />
+
+	<item itemtype="Node" CircId="Node-619" mainComp="false" Pos="344,-144" />
+
+	<item itemtype="Node" CircId="Node-620" mainComp="false" Pos="344,-24" />
+
+	<item itemtype="Node" CircId="Node-621" mainComp="false" Pos="344,368" />
+
+	<item itemtype="Node" CircId="Node-622" mainComp="false" Pos="344,160" />
+
+	<item itemtype="Node" CircId="Node-623" mainComp="false" Pos="344,296" />
+
+	<item itemtype="Node" CircId="Node-624" mainComp="false" Pos="344,216" />
+
+	<item itemtype="Node" CircId="Node-625" mainComp="false" Pos="344,344" />
+
+	<item itemtype="Node" CircId="Node-626" mainComp="false" Pos="344,-8" />
+
+	<item itemtype="Node" CircId="Node-627" mainComp="false" Pos="344,40" />
+
+	<item itemtype="Node" CircId="Node-628" mainComp="false" Pos="344,232" />
+
+	<item itemtype="Node" CircId="Node-629" mainComp="false" Pos="344,-88" />
+
+	<item itemtype="Node" CircId="Node-630" mainComp="false" Pos="344,392" />
+
+	<item itemtype="Node" CircId="Node-631" mainComp="false" Pos="344,-72" />
+
+	<item itemtype="Node" CircId="Node-632" mainComp="false" Pos="344,-56" />
+
+	<item itemtype="Node" CircId="Node-633" mainComp="false" Pos="344,-128" />
+
+	<item itemtype="Node" CircId="Node-634" mainComp="false" Pos="344,144" />
+
+	<item itemtype="Node" CircId="Node-635" mainComp="false" Pos="344,0" />
+
+	<item itemtype="Node" CircId="Node-636" mainComp="false" Pos="344,192" />
+
+	<item itemtype="Node" CircId="Node-637" mainComp="false" Pos="344,376" />
+
+	<item itemtype="Node" CircId="Node-638" mainComp="false" Pos="344,-40" />
+
+	<item itemtype="Node" CircId="Node-639" mainComp="false" Pos="344,440" />
+
+	<item itemtype="Node" CircId="Node-640" mainComp="false" Pos="344,112" />
+
+	<item itemtype="Node" CircId="Node-641" mainComp="false" Pos="344,96" />
+
+	<item itemtype="Node" CircId="Node-642" mainComp="false" Pos="344,168" />
+
+	<item itemtype="Node" CircId="Node-643" mainComp="false" Pos="344,-32" />
+
+	<item itemtype="Node" CircId="Node-644" mainComp="false" Pos="344,400" />
+
+	<item itemtype="Node" CircId="Node-645" mainComp="false" Pos="344,152" />
+
+	<item itemtype="Node" CircId="Node-646" mainComp="false" Pos="344,-64" />
+
+	<item itemtype="Node" CircId="Node-647" mainComp="false" Pos="344,336" />
+
+	<item itemtype="Node" CircId="Node-648" mainComp="false" Pos="344,248" />
+
+	<item itemtype="Node" CircId="Node-649" mainComp="false" Pos="344,80" />
+
+	<item itemtype="Node" CircId="Node-650" mainComp="false" Pos="344,408" />
+
+	<item itemtype="Node" CircId="Node-651" mainComp="false" Pos="344,104" />
+
+	<item itemtype="Node" CircId="Node-652" mainComp="false" Pos="344,472" />
+
+	<item itemtype="Node" CircId="Node-653" mainComp="false" Pos="344,32" />
+
+	<item itemtype="Node" CircId="Node-654" mainComp="false" Pos="344,64" />
+
+	<item itemtype="Node" CircId="Node-655" mainComp="false" Pos="344,136" />
+
+	<item itemtype="Node" CircId="Node-656" mainComp="false" Pos="344,72" />
+
+	<item itemtype="Node" CircId="Node-657" mainComp="false" Pos="344,-136" />
+
+	<item itemtype="Node" CircId="Node-658" mainComp="false" Pos="344,448" />
+
+	<item itemtype="Node" CircId="Node-659" mainComp="false" Pos="344,416" />
+
+	<item itemtype="Node" CircId="Node-660" mainComp="false" Pos="344,272" />
+
+	<item itemtype="Node" CircId="Node-661" mainComp="false" Pos="344,256" />
+
+	<item itemtype="Node" CircId="Node-662" mainComp="false" Pos="344,-48" />
+
+	<item itemtype="Node" CircId="Node-663" mainComp="false" Pos="344,-96" />
+
+	<item itemtype="Node" CircId="Node-664" mainComp="false" Pos="344,352" />
+
+	<item itemtype="Node" CircId="Node-665" mainComp="false" Pos="344,240" />
+
+	<item itemtype="Node" CircId="Node-667" mainComp="false" Pos="344,328" />
+
+	<item itemtype="Node" CircId="Node-669" mainComp="false" Pos="344,8" />
+
+	<item itemtype="Node" CircId="Node-670" mainComp="false" Pos="344,424" />
+
+	<item itemtype="Node" CircId="Node-671" mainComp="false" Pos="344,280" />
+
+	<item itemtype="Node" CircId="Node-672" mainComp="false" Pos="344,88" />
+
+	<item itemtype="Node" CircId="Node-673" mainComp="false" Pos="344,-148" />
+
+	<item itemtype="Node" CircId="Node-674" mainComp="false" Pos="344,-16" />
+
+	<item itemtype="Node" CircId="Node-675" mainComp="false" Pos="344,-104" />
+
+	<item itemtype="Node" CircId="Node-676" mainComp="false" Pos="344,-120" />
+
+	<item itemtype="Node" CircId="Node-677" mainComp="false" Pos="344,456" />
+
+	<item itemtype="Node" CircId="Node-840" mainComp="false" Pos="368,304" />
+
+	<item itemtype="Node" CircId="Node-843" mainComp="false" Pos="368,448" />
+
+	<item itemtype="Node" CircId="Node-845" mainComp="false" Pos="368,296" />
+
+	<item itemtype="Node" CircId="Node-846" mainComp="false" Pos="368,-88" />
+
+	<item itemtype="Node" CircId="Node-848" mainComp="false" Pos="368,-112" />
+
+	<item itemtype="Node" CircId="Node-849" mainComp="false" Pos="368,424" />
+
+	<item itemtype="Node" CircId="Node-850" mainComp="false" Pos="368,64" />
+
+	<item itemtype="Node" CircId="Node-852" mainComp="false" Pos="368,96" />
+
+	<item itemtype="Node" CircId="Node-854" mainComp="false" Pos="368,312" />
+
+	<item itemtype="Node" CircId="Node-859" mainComp="false" Pos="368,24" />
+
+	<item itemtype="Node" CircId="Node-865" mainComp="false" Pos="368,32" />
+
+	<item itemtype="Node" CircId="Node-866" mainComp="false" Pos="368,16" />
+
+	<item itemtype="Node" CircId="Node-867" mainComp="false" Pos="368,-104" />
+
+	<item itemtype="Node" CircId="Node-868" mainComp="false" Pos="368,368" />
+
+	<item itemtype="Node" CircId="Node-870" mainComp="false" Pos="368,-128" />
+
+	<item itemtype="Node" CircId="Node-871" mainComp="false" Pos="368,152" />
+
+	<item itemtype="Node" CircId="Node-872" mainComp="false" Pos="368,184" />
+
+	<item itemtype="Node" CircId="Node-873" mainComp="false" Pos="368,48" />
+
+	<item itemtype="Node" CircId="Node-875" mainComp="false" Pos="368,160" />
+
+	<item itemtype="Node" CircId="Node-880" mainComp="false" Pos="368,416" />
+
+	<item itemtype="Node" CircId="Node-882" mainComp="false" Pos="368,192" />
+
+	<item itemtype="Node" CircId="Node-883" mainComp="false" Pos="368,288" />
+
+	<item itemtype="Node" CircId="Node-884" mainComp="false" Pos="368,264" />
+
+	<item itemtype="Node" CircId="Node-885" mainComp="false" Pos="368,336" />
+
+	<item itemtype="Node" CircId="Node-889" mainComp="false" Pos="368,456" />
+
+	<item itemtype="Node" CircId="Node-890" mainComp="false" Pos="368,-48" />
+
+	<item itemtype="Node" CircId="Node-892" mainComp="false" Pos="368,112" />
+
+	<item itemtype="Node" CircId="Node-893" mainComp="false" Pos="368,-16" />
+
+	<item itemtype="Node" CircId="Node-894" mainComp="false" Pos="368,-24" />
+
+	<item itemtype="Node" CircId="Node-896" mainComp="false" Pos="368,224" />
+
+	<item itemtype="Node" CircId="Node-898" mainComp="false" Pos="368,232" />
+
+	<item itemtype="Node" CircId="Node-899" mainComp="false" Pos="368,472" />
+
+	<item itemtype="Node" CircId="Node-900" mainComp="false" Pos="368,384" />
+
+	<item itemtype="Node" CircId="Node-902" mainComp="false" Pos="368,272" />
+
+	<item itemtype="Node" CircId="Node-903" mainComp="false" Pos="368,-64" />
+
+	<item itemtype="Node" CircId="Node-904" mainComp="false" Pos="368,216" />
+
+	<item itemtype="Node" CircId="Node-905" mainComp="false" Pos="368,280" />
+
+	<item itemtype="Node" CircId="Node-906" mainComp="false" Pos="368,-148" />
+
+	<item itemtype="Node" CircId="Node-907" mainComp="false" Pos="368,88" />
+
+	<item itemtype="Node" CircId="Node-909" mainComp="false" Pos="368,-96" />
+
+	<item itemtype="Node" CircId="Node-912" mainComp="false" Pos="368,168" />
+
+	<item itemtype="Node" CircId="Node-915" mainComp="false" Pos="368,-40" />
+
+	<item itemtype="Node" CircId="Node-919" mainComp="false" Pos="368,200" />
+
+	<item itemtype="Node" CircId="Node-920" mainComp="false" Pos="368,344" />
+
+	<item itemtype="Node" CircId="Node-921" mainComp="false" Pos="368,320" />
+
+	<item itemtype="Node" CircId="Node-923" mainComp="false" Pos="368,104" />
+
+	<item itemtype="Node" CircId="Node-925" mainComp="false" Pos="368,376" />
+
+	<item itemtype="Node" CircId="Node-926" mainComp="false" Pos="368,120" />
+
+	<item itemtype="Node" CircId="Node-927" mainComp="false" Pos="368,144" />
+
+	<item itemtype="Node" CircId="Node-930" mainComp="false" Pos="368,40" />
+
+	<item itemtype="Node" CircId="Node-934" mainComp="false" Pos="368,248" />
+
+	<item itemtype="Node" CircId="Node-938" mainComp="false" Pos="368,176" />
+
+	<item itemtype="Node" CircId="Node-939" mainComp="false" Pos="368,256" />
+
+	<item itemtype="Node" CircId="Node-943" mainComp="false" Pos="368,80" />
+
+	<item itemtype="Node" CircId="Node-949" mainComp="false" Pos="368,432" />
+
+	<item itemtype="Node" CircId="Node-950" mainComp="false" Pos="368,-56" />
+
+	<item itemtype="Node" CircId="Node-953" mainComp="false" Pos="368,464" />
+
+	<item itemtype="Node" CircId="Node-954" mainComp="false" Pos="368,328" />
+
+	<item itemtype="Node" CircId="Node-956" mainComp="false" Pos="368,8" />
+
+	<item itemtype="Node" CircId="Node-957" mainComp="false" Pos="368,208" />
+
+	<item itemtype="Node" CircId="Node-958" mainComp="false" Pos="368,-120" />
+
+	<item itemtype="Node" CircId="Node-960" mainComp="false" Pos="368,408" />
+
+	<item itemtype="Node" CircId="Node-962" mainComp="false" Pos="368,128" />
+
+	<item itemtype="Node" CircId="Node-964" mainComp="false" Pos="368,392" />
+
+	<item itemtype="Node" CircId="Node-965" mainComp="false" Pos="368,56" />
+
+	<item itemtype="Node" CircId="Node-967" mainComp="false" Pos="368,72" />
+
+	<item itemtype="Node" CircId="Node-968" mainComp="false" Pos="368,400" />
+
+	<item itemtype="Node" CircId="Node-969" mainComp="false" Pos="368,-72" />
+
+	<item itemtype="Node" CircId="Node-977" mainComp="false" Pos="368,-80" />
+
+	<item itemtype="Node" CircId="Node-982" mainComp="false" Pos="368,440" />
+
+	<item itemtype="Node" CircId="Node-984" mainComp="false" Pos="368,-136" />
+
+	<item itemtype="Node" CircId="Node-987" mainComp="false" Pos="368,-32" />
+
+	<item itemtype="Node" CircId="Node-991" mainComp="false" Pos="368,-144" />
+
+	<item itemtype="Node" CircId="Node-993" mainComp="false" Pos="368,352" />
+
+	<item itemtype="Node" CircId="Node-994" mainComp="false" Pos="368,360" />
+
+	<item itemtype="Node" CircId="Node-995" mainComp="false" Pos="368,-8" />
+
+	<item itemtype="Node" CircId="Node-997" mainComp="false" Pos="368,240" />
+
+	<item itemtype="Node" CircId="Node-999" mainComp="false" Pos="368,0" />
+
+	<item itemtype="Node" CircId="Node-1000" mainComp="false" Pos="368,136" />
+
+	<item itemtype="Connector" uid="Connector-368" startpinid="Tunnel-184-pin" endpinid="Mega-1-53" pointList="328,-588,332,-588" />
+
+	<item itemtype="Connector" uid="Connector-369" startpinid="Mega-1-52" endpinid="Tunnel-182-pin" pointList="332,-596,332,-596" />
+
+	<item itemtype="Connector" uid="Connector-371" startpinid="Tunnel-183-pin" endpinid="Mega-1-51" pointList="332,-604,332,-604" />
+
+	<item itemtype="Connector" uid="Connector-383" startpinid="Tunnel-191-pin" endpinid="Max72xx_matrix-49PinCS" pointList="-180,-52,-180,-52" />
+
+	<item itemtype="Connector" uid="Connector-384" startpinid="Tunnel-190-pin" endpinid="Max72xx_matrix-49PinDin" pointList="-188,-56,-188,-52" />
+
+	<item itemtype="Connector" uid="Connector-385" startpinid="Tunnel-189-pin" endpinid="Max72xx_matrix-49PinSck" pointList="-196,-56,-196,-52" />
+
+	<item itemtype="Connector" uid="Connector-388" startpinid="Tunnel-192-pin" endpinid="Max72xx_matrix-50PinCS" pointList="-180,120,-180,120" />
+
+	<item itemtype="Connector" uid="Connector-389" startpinid="Tunnel-194-pin" endpinid="Max72xx_matrix-50PinDin" pointList="-188,116,-188,120" />
+
+	<item itemtype="Connector" uid="Connector-391" startpinid="Max72xx_matrix-50PinSck" endpinid="Tunnel-193-pin" pointList="-196,120,-196,116" />
+
+	<item itemtype="Connector" uid="Connector-392" startpinid="Tunnel-195-pin" endpinid="Max72xx_matrix-51PinCS" pointList="-180,304,-180,304" />
+
+	<item itemtype="Connector" uid="Connector-393" startpinid="Tunnel-197-pin" endpinid="Max72xx_matrix-51PinDin" pointList="-188,300,-188,304" />
+
+	<item itemtype="Connector" uid="Connector-394" startpinid="Tunnel-196-pin" endpinid="Max72xx_matrix-51PinSck" pointList="-196,300,-196,304" />
+
+	<item itemtype="Connector" uid="Connector-395" startpinid="Tunnel-200-pin" endpinid="Max72xx_matrix-52PinCS" pointList="-180,484,-180,484" />
+
+	<item itemtype="Connector" uid="Connector-396" startpinid="Tunnel-199-pin" endpinid="Max72xx_matrix-52PinDin" pointList="-188,480,-188,484" />
+
+	<item itemtype="Connector" uid="Connector-397" startpinid="Tunnel-198-pin" endpinid="Max72xx_matrix-52PinSck" pointList="-196,480,-196,484" />
+
+	<item itemtype="Connector" uid="Connector-414" startpinid="Tunnel-203-pin" endpinid="DcMotor-82-lPin" pointList="-352,-104,-352,-104" />
+
+	<item itemtype="Connector" uid="Connector-415" startpinid="Tunnel-202-pin" endpinid="DcMotor-82-rPin" pointList="-272,-104,-272,-104" />
+
+	<item itemtype="Connector" uid="Connector-416" startpinid="Tunnel-204-pin" endpinid="DcMotor-206-lPin" pointList="-352,68,-352,68" />
+
+	<item itemtype="Connector" uid="Connector-417" startpinid="Tunnel-207-pin" endpinid="DcMotor-209-lPin" pointList="-348,252,-348,252" />
+
+	<item itemtype="Connector" uid="Connector-418" startpinid="Tunnel-210-pin" endpinid="DcMotor-212-lPin" pointList="-344,432,-344,432" />
+
+	<item itemtype="Connector" uid="Connector-419" startpinid="Tunnel-213-pin" endpinid="DcMotor-224-lPin" pointList="408,-104,408,-104" />
+
+	<item itemtype="Connector" uid="Connector-420" startpinid="Tunnel-221-pin" endpinid="DcMotor-217-lPin" pointList="416,432,416,432" />
+
+	<item itemtype="Connector" uid="Connector-421" startpinid="Tunnel-220-pin" endpinid="DcMotor-224-rPin" pointList="488,-104,488,-104" />
+
+	<item itemtype="Connector" uid="Connector-422" startpinid="Tunnel-218-pin" endpinid="DcMotor-214-lPin" pointList="412,252,412,252" />
+
+	<item itemtype="Connector" uid="Connector-423" startpinid="Tunnel-223-pin" endpinid="DcMotor-216-lPin" pointList="408,68,408,68" />
+
+	<item itemtype="Connector" uid="Connector-430" startpinid="Tunnel-230-pin" endpinid="DAC-178-in0" pointList="396,-924,396,-924" />
+
+	<item itemtype="Connector" uid="Connector-431" startpinid="Tunnel-231-pin" endpinid="DAC-178-in1" pointList="396,-916,396,-916" />
+
+	<item itemtype="Connector" uid="Connector-429" startpinid="DAC-178-out0" endpinid="Tunnel-229-pin" pointList="444,-924,444,-924" />
+
+	<item itemtype="Connector" uid="Connector-437" startpinid="Tunnel-205-pin" endpinid="DcMotor-206-rPin" pointList="-272,64,-272,68" />
+
+	<item itemtype="Connector" uid="Connector-438" startpinid="Tunnel-208-pin" endpinid="DcMotor-209-rPin" pointList="-268,248,-268,252" />
+
+	<item itemtype="Connector" uid="Connector-439" startpinid="DcMotor-212-rPin" endpinid="Tunnel-211-pin" pointList="-264,432,-264,428" />
+
+	<item itemtype="Connector" uid="Connector-440" startpinid="DcMotor-216-rPin" endpinid="Tunnel-219-pin" pointList="488,68,488,64" />
+
+	<item itemtype="Connector" uid="Connector-449" startpinid="DcMotor-214-rPin" endpinid="Tunnel-215-pin" pointList="492,252,492,252" />
+
+	<item itemtype="Connector" uid="Connector-450" startpinid="DcMotor-217-rPin" endpinid="Tunnel-222-pin" pointList="496,432,500,432" />
+
+	<item itemtype="Connector" uid="Connector-451" startpinid="Tunnel-237-pin" endpinid="Mega-1-50" pointList="328,-612,332,-612" />
+
+	<item itemtype="Connector" uid="Connector-452" startpinid="Tunnel-238-pin" endpinid="Mega-1-49" pointList="328,-620,332,-620" />
+
+	<item itemtype="Connector" uid="Connector-453" startpinid="Tunnel-253-pin" endpinid="Push-41-pinP0" pointList="-252,-340,-252,-340" />
+
+	<item itemtype="Connector" uid="Connector-455" startpinid="Tunnel-254-pin" endpinid="Mega-1-48" pointList="328,-628,332,-628" />
+
+	<item itemtype="Connector" uid="Connector-456" startpinid="Push-41-switch0pinN" endpinid="Tunnel-255-pin" pointList="-220,-340,-220,-340" />
+
+	<item itemtype="Connector" uid="Connector-457" startpinid="Tunnel-256-pin" endpinid="Push-42-pinP0" pointList="-160,-340,-160,-340" />
+
+	<item itemtype="Connector" uid="Connector-458" startpinid="Push-42-switch0pinN" endpinid="Tunnel-257-pin" pointList="-128,-340,-128,-340" />
+
+	<item itemtype="Connector" uid="Connector-459" startpinid="Tunnel-258-pin" endpinid="Mega-1-47" pointList="336,-636,332,-636" />
+
+	<item itemtype="Connector" uid="Connector-463" startpinid="Tunnel-263-pin" endpinid="Mega-1-5V00" pointList="328,-564,332,-564" />
+
+	<item itemtype="Connector" uid="Connector-464" startpinid="Tunnel-262-pin" endpinid="Hd44780-16-PinRW" pointList="-72,-260,-72,-256" />
+
+	<item itemtype="Connector" uid="Connector-466" startpinid="Tunnel-264-pin" endpinid="Hd44780-16-PinRS" pointList="-80,-256,-80,-256" />
+
+	<item itemtype="Connector" uid="Connector-467" startpinid="Tunnel-265-pin" endpinid="Hd44780-16-PinEn" pointList="-64,-256,-64,-256" />
+
+	<item itemtype="Connector" uid="Connector-468" startpinid="Tunnel-268-pin" endpinid="Hd44780-16-dataPin4" pointList="-24,-256,-24,-256" />
+
+	<item itemtype="Connector" uid="Connector-469" startpinid="Tunnel-266-pin" endpinid="Hd44780-16-dataPin5" pointList="-16,-256,-16,-256" />
+
+	<item itemtype="Connector" uid="Connector-470" startpinid="Tunnel-267-pin" endpinid="Hd44780-16-dataPin6" pointList="-8,-256,-8,-256" />
+
+	<item itemtype="Connector" uid="Connector-473" startpinid="Tunnel-269-pin" endpinid="Hd44780-16-dataPin7" pointList="0,-256,0,-256" />
+
+	<item itemtype="Connector" uid="Connector-474" startpinid="Tunnel-276-pin" endpinid="Mega-1-45" pointList="328,-652,332,-652" />
+
+	<item itemtype="Connector" uid="Connector-475" startpinid="Tunnel-279-pin" endpinid="Mega-1-44" pointList="328,-660,332,-660" />
+
+	<item itemtype="Connector" uid="Connector-476" startpinid="Tunnel-280-pin" endpinid="Mega-1-43" pointList="328,-668,332,-668" />
+
+	<item itemtype="Connector" uid="Connector-477" startpinid="Tunnel-277-pin" endpinid="Mega-1-42" pointList="328,-676,332,-676" />
+
+	<item itemtype="Connector" uid="Connector-478" startpinid="Tunnel-278-pin" endpinid="Mega-1-41" pointList="328,-684,332,-684" />
+
+	<item itemtype="Connector" uid="Connector-479" startpinid="Tunnel-281-pin" endpinid="Mega-1-40" pointList="328,-692,332,-692" />
+
+	<item itemtype="Connector" uid="Connector-480" startpinid="Tunnel-283-pin" endpinid="LedBar-13-led2-pinP" pointList="192,-300,192,-300" />
+
+	<item itemtype="Connector" uid="Connector-481" startpinid="Tunnel-284-pin" endpinid="LedBar-13-led1-pinP" pointList="192,-308,192,-308" />
+
+	<item itemtype="Connector" uid="Connector-482" startpinid="Tunnel-285-pin" endpinid="LedBar-13-led0-pinP" pointList="192,-316,192,-316" />
+
+	<item itemtype="Connector" uid="Connector-483" startpinid="Tunnel-288-pin" endpinid="LedBar-46-led2-pinP" pointList="308,-300,308,-300" />
+
+	<item itemtype="Connector" uid="Connector-484" startpinid="Tunnel-287-pin" endpinid="LedBar-46-led1-pinP" pointList="308,-308,308,-308" />
+
+	<item itemtype="Connector" uid="Connector-485" startpinid="Tunnel-286-pin" endpinid="LedBar-46-led0-pinP" pointList="308,-316,308,-316" />
+
+	<item itemtype="Connector" uid="Connector-486" startpinid="Tunnel-290-pin" endpinid="Mega-1-38" pointList="348,-728,348,-724" />
+
+	<item itemtype="Connector" uid="Connector-487" startpinid="Tunnel-289-pin" endpinid="Mega-1-37" pointList="356,-728,356,-724" />
+
+	<item itemtype="Connector" uid="Connector-488" startpinid="Tunnel-291-pin" endpinid="Mega-1-36" pointList="364,-728,364,-724" />
+
+	<item itemtype="Connector" uid="Connector-489" startpinid="Tunnel-292-pin" endpinid="Mega-1-35" pointList="372,-728,372,-724" />
+
+	<item itemtype="Connector" uid="Connector-490" startpinid="Mega-1-34" endpinid="Tunnel-293-pin" pointList="380,-724,380,-728" />
+
+	<item itemtype="Connector" uid="Connector-491" startpinid="Tunnel-294-pin" endpinid="Mega-1-33" pointList="388,-728,388,-724" />
+
+	<item itemtype="Connector" uid="Connector-493" startpinid="Tunnel-226-pin" endpinid="Mega-1-GND0" pointList="332,-548,332,-548" />
+
+	<item itemtype="Connector" uid="Connector-501" startpinid="Tunnel-307-pin" endpinid="Mega-1-32" pointList="396,-724,396,-724" />
+
+	<item itemtype="Connector" uid="Connector-502" startpinid="Tunnel-309-pin" endpinid="Mega-1-31" pointList="404,-724,404,-724" />
+
+	<item itemtype="Connector" uid="Connector-504" startpinid="Tunnel-310-pin" endpinid="Mega-1-29" pointList="420,-720,420,-724" />
+
+	<item itemtype="Connector" uid="Connector-505" startpinid="Tunnel-312-pin" endpinid="Mega-1-28" pointList="428,-720,428,-724" />
+
+	<item itemtype="Connector" uid="Connector-507" startpinid="Tunnel-314-pin" endpinid="AudioOut-313-lPin" pointList="-432,-316,-416,-316" />
+
+	<item itemtype="Connector" uid="Connector-509" startpinid="AudioOut-313-rPin" endpinid="Ground-316-Gnd" pointList="-416,-308,-428,-308" />
+
+	<item itemtype="Connector" uid="Connector-506" startpinid="Tunnel-311-pin" endpinid="Mega-1-27" pointList="436,-720,436,-724" />
+
+	<item itemtype="Connector" uid="Connector-503" startpinid="Tunnel-308-pin" endpinid="Mega-1-30" pointList="412,-724,412,-724" />
+
+	<item itemtype="Connector" uid="Connector-512" startpinid="KeyPad-299-Pin1" endpinid="Tunnel-317-pin" pointList="256,-296,256,-296" />
+
+	<item itemtype="Connector" uid="Connector-513" startpinid="Tunnel-318-pin" endpinid="KeyPad-33-Pin1" pointList="368,-296,368,-296" />
+
+	<item itemtype="Connector" uid="Connector-514" startpinid="Tunnel-315-pin" endpinid="Mega-1-26" pointList="444,-720,444,-724" />
+
+	<item itemtype="Connector" uid="Connector-518" startpinid="KeyPad-299-Pin2" endpinid="Tunnel-301-pin" pointList="240,-280,240,-280" />
+
+	<item itemtype="Connector" uid="Connector-519" startpinid="KeyPad-299-Pin0" endpinid="Tunnel-302-pin" pointList="256,-312,256,-312" />
+
+	<item itemtype="Connector" uid="Connector-520" startpinid="KeyPad-33-Pin2" endpinid="Tunnel-304-pin" pointList="352,-280,352,-284" />
+
+	<item itemtype="Connector" uid="Connector-521" startpinid="Tunnel-305-pin" endpinid="KeyPad-33-Pin0" pointList="368,-312,368,-312" />
+
+	<item itemtype="Connector" uid="Connector-604" startpinid="Node-335-2" endpinid="LedBar-321-led1-pinP" pointList="320,-144,320,-144" />
+
+	<item itemtype="Connector" uid="Connector-606" startpinid="Node-335-1" endpinid="Node-336-0" pointList="320,-144,320,-136" />
+
+	<item itemtype="Connector" uid="Connector-607" startpinid="Node-336-2" endpinid="LedBar-321-led2-pinP" pointList="320,-136,320,-136" />
+
+	<item itemtype="Connector" uid="Connector-609" startpinid="Node-336-1" endpinid="Node-337-0" pointList="320,-136,320,-128" />
+
+	<item itemtype="Connector" uid="Connector-610" startpinid="Node-337-2" endpinid="LedBar-321-led3-pinP" pointList="320,-128,320,-128" />
+
+	<item itemtype="Connector" uid="Connector-612" startpinid="Node-337-1" endpinid="Node-338-0" pointList="320,-128,320,-120" />
+
+	<item itemtype="Connector" uid="Connector-613" startpinid="Node-338-2" endpinid="LedBar-321-led4-pinP" pointList="320,-120,320,-120" />
+
+	<item itemtype="Connector" uid="Connector-615" startpinid="Node-338-1" endpinid="Node-339-0" pointList="320,-120,320,-112" />
+
+	<item itemtype="Connector" uid="Connector-616" startpinid="Node-339-2" endpinid="LedBar-321-led5-pinP" pointList="320,-112,320,-112" />
+
+	<item itemtype="Connector" uid="Connector-618" startpinid="Node-339-1" endpinid="Node-340-0" pointList="320,-112,320,-104" />
+
+	<item itemtype="Connector" uid="Connector-619" startpinid="Node-340-2" endpinid="LedBar-321-led6-pinP" pointList="320,-104,320,-104" />
+
+	<item itemtype="Connector" uid="Connector-621" startpinid="Node-340-1" endpinid="Node-341-0" pointList="320,-104,320,-96" />
+
+	<item itemtype="Connector" uid="Connector-622" startpinid="Node-341-2" endpinid="LedBar-321-led7-pinP" pointList="320,-96,320,-96" />
+
+	<item itemtype="Connector" uid="Connector-624" startpinid="Node-341-1" endpinid="Node-342-0" pointList="320,-96,320,-88" />
+
+	<item itemtype="Connector" uid="Connector-625" startpinid="Node-342-2" endpinid="LedBar-321-led8-pinP" pointList="320,-88,320,-88" />
+
+	<item itemtype="Connector" uid="Connector-627" startpinid="Node-342-1" endpinid="Node-343-0" pointList="320,-88,320,-80" />
+
+	<item itemtype="Connector" uid="Connector-628" startpinid="Node-343-2" endpinid="LedBar-321-led9-pinP" pointList="320,-80,320,-80" />
+
+	<item itemtype="Connector" uid="Connector-630" startpinid="Node-343-1" endpinid="Node-344-0" pointList="320,-80,320,-72" />
+
+	<item itemtype="Connector" uid="Connector-631" startpinid="Node-344-2" endpinid="LedBar-321-led10-pinP" pointList="320,-72,320,-72" />
+
+	<item itemtype="Connector" uid="Connector-633" startpinid="Node-344-1" endpinid="Node-345-0" pointList="320,-72,320,-64" />
+
+	<item itemtype="Connector" uid="Connector-634" startpinid="Node-345-2" endpinid="LedBar-321-led11-pinP" pointList="320,-64,320,-64" />
+
+	<item itemtype="Connector" uid="Connector-636" startpinid="Node-345-1" endpinid="Node-346-0" pointList="320,-64,320,-56" />
+
+	<item itemtype="Connector" uid="Connector-637" startpinid="Node-346-2" endpinid="LedBar-321-led12-pinP" pointList="320,-56,320,-56" />
+
+	<item itemtype="Connector" uid="Connector-639" startpinid="Node-346-1" endpinid="Node-347-0" pointList="320,-56,320,-48" />
+
+	<item itemtype="Connector" uid="Connector-640" startpinid="Node-347-2" endpinid="LedBar-321-led13-pinP" pointList="320,-48,320,-48" />
+
+	<item itemtype="Connector" uid="Connector-642" startpinid="Node-347-1" endpinid="Node-348-0" pointList="320,-48,320,-40" />
+
+	<item itemtype="Connector" uid="Connector-643" startpinid="Node-348-2" endpinid="LedBar-321-led14-pinP" pointList="320,-40,320,-40" />
+
+	<item itemtype="Connector" uid="Connector-645" startpinid="Node-348-1" endpinid="Node-349-0" pointList="320,-40,320,-32" />
+
+	<item itemtype="Connector" uid="Connector-646" startpinid="Node-349-2" endpinid="LedBar-321-led15-pinP" pointList="320,-32,320,-32" />
+
+	<item itemtype="Connector" uid="Connector-648" startpinid="Node-349-1" endpinid="Node-350-0" pointList="320,-32,320,-24" />
+
+	<item itemtype="Connector" uid="Connector-649" startpinid="Node-350-2" endpinid="LedBar-321-led16-pinP" pointList="320,-24,320,-24" />
+
+	<item itemtype="Connector" uid="Connector-651" startpinid="Node-350-1" endpinid="Node-351-0" pointList="320,-24,320,-16" />
+
+	<item itemtype="Connector" uid="Connector-652" startpinid="Node-351-2" endpinid="LedBar-321-led17-pinP" pointList="320,-16,320,-16" />
+
+	<item itemtype="Connector" uid="Connector-654" startpinid="Node-351-1" endpinid="Node-352-0" pointList="320,-16,320,-8" />
+
+	<item itemtype="Connector" uid="Connector-655" startpinid="Node-352-2" endpinid="LedBar-321-led18-pinP" pointList="320,-8,320,-8" />
+
+	<item itemtype="Connector" uid="Connector-657" startpinid="Node-352-1" endpinid="Node-353-0" pointList="320,-8,320,0" />
+
+	<item itemtype="Connector" uid="Connector-658" startpinid="Node-353-2" endpinid="LedBar-321-led19-pinP" pointList="320,0,320,0" />
+
+	<item itemtype="Connector" uid="Connector-660" startpinid="Node-353-1" endpinid="Node-354-0" pointList="320,0,320,8" />
+
+	<item itemtype="Connector" uid="Connector-661" startpinid="Node-354-2" endpinid="LedBar-321-led20-pinP" pointList="320,8,320,8" />
+
+	<item itemtype="Connector" uid="Connector-663" startpinid="Node-354-1" endpinid="Node-355-0" pointList="320,8,320,16" />
+
+	<item itemtype="Connector" uid="Connector-664" startpinid="Node-355-2" endpinid="LedBar-321-led21-pinP" pointList="320,16,320,16" />
+
+	<item itemtype="Connector" uid="Connector-666" startpinid="Node-355-1" endpinid="Node-356-0" pointList="320,16,320,24" />
+
+	<item itemtype="Connector" uid="Connector-667" startpinid="Node-356-2" endpinid="LedBar-321-led22-pinP" pointList="320,24,320,24" />
+
+	<item itemtype="Connector" uid="Connector-669" startpinid="Node-356-1" endpinid="Node-357-0" pointList="320,24,320,32" />
+
+	<item itemtype="Connector" uid="Connector-670" startpinid="Node-357-2" endpinid="LedBar-321-led23-pinP" pointList="320,32,320,32" />
+
+	<item itemtype="Connector" uid="Connector-672" startpinid="Node-357-1" endpinid="Node-358-0" pointList="320,32,320,40" />
+
+	<item itemtype="Connector" uid="Connector-673" startpinid="Node-358-2" endpinid="LedBar-321-led24-pinP" pointList="320,40,320,40" />
+
+	<item itemtype="Connector" uid="Connector-675" startpinid="Node-358-1" endpinid="Node-359-0" pointList="320,40,320,48" />
+
+	<item itemtype="Connector" uid="Connector-676" startpinid="Node-359-2" endpinid="LedBar-321-led25-pinP" pointList="320,48,320,48" />
+
+	<item itemtype="Connector" uid="Connector-678" startpinid="Node-359-1" endpinid="Node-360-0" pointList="320,48,320,56" />
+
+	<item itemtype="Connector" uid="Connector-679" startpinid="Node-360-2" endpinid="LedBar-321-led26-pinP" pointList="320,56,320,56" />
+
+	<item itemtype="Connector" uid="Connector-681" startpinid="Node-360-1" endpinid="Node-361-0" pointList="320,56,320,64" />
+
+	<item itemtype="Connector" uid="Connector-682" startpinid="Node-361-2" endpinid="LedBar-321-led27-pinP" pointList="320,64,320,64" />
+
+	<item itemtype="Connector" uid="Connector-684" startpinid="Node-361-1" endpinid="Node-362-0" pointList="320,64,320,72" />
+
+	<item itemtype="Connector" uid="Connector-685" startpinid="Node-362-2" endpinid="LedBar-321-led28-pinP" pointList="320,72,320,72" />
+
+	<item itemtype="Connector" uid="Connector-687" startpinid="Node-362-1" endpinid="Node-363-0" pointList="320,72,320,80" />
+
+	<item itemtype="Connector" uid="Connector-688" startpinid="Node-363-2" endpinid="LedBar-321-led29-pinP" pointList="320,80,320,80" />
+
+	<item itemtype="Connector" uid="Connector-690" startpinid="Node-363-1" endpinid="Node-364-0" pointList="320,80,320,88" />
+
+	<item itemtype="Connector" uid="Connector-691" startpinid="Node-364-2" endpinid="LedBar-321-led30-pinP" pointList="320,88,320,88" />
+
+	<item itemtype="Connector" uid="Connector-693" startpinid="Node-364-1" endpinid="Node-365-0" pointList="320,88,320,96" />
+
+	<item itemtype="Connector" uid="Connector-694" startpinid="Node-365-2" endpinid="LedBar-321-led31-pinP" pointList="320,96,320,96" />
+
+	<item itemtype="Connector" uid="Connector-696" startpinid="Node-365-1" endpinid="Node-366-0" pointList="320,96,320,104" />
+
+	<item itemtype="Connector" uid="Connector-697" startpinid="Node-366-2" endpinid="LedBar-321-led32-pinP" pointList="320,104,320,104" />
+
+	<item itemtype="Connector" uid="Connector-699" startpinid="Node-366-1" endpinid="Node-367-0" pointList="320,104,320,112" />
+
+	<item itemtype="Connector" uid="Connector-700" startpinid="Node-367-2" endpinid="LedBar-321-led33-pinP" pointList="320,112,320,112" />
+
+	<item itemtype="Connector" uid="Connector-702" startpinid="Node-367-1" endpinid="Node-368-0" pointList="320,112,320,120" />
+
+	<item itemtype="Connector" uid="Connector-703" startpinid="Node-368-2" endpinid="LedBar-321-led34-pinP" pointList="320,120,320,120" />
+
+	<item itemtype="Connector" uid="Connector-705" startpinid="Node-368-1" endpinid="Node-369-0" pointList="320,120,320,128" />
+
+	<item itemtype="Connector" uid="Connector-706" startpinid="Node-369-2" endpinid="LedBar-321-led35-pinP" pointList="320,128,320,128" />
+
+	<item itemtype="Connector" uid="Connector-708" startpinid="Node-369-1" endpinid="Node-370-0" pointList="320,128,320,136" />
+
+	<item itemtype="Connector" uid="Connector-709" startpinid="Node-370-2" endpinid="LedBar-321-led36-pinP" pointList="320,136,320,136" />
+
+	<item itemtype="Connector" uid="Connector-711" startpinid="Node-370-1" endpinid="Node-371-0" pointList="320,136,320,144" />
+
+	<item itemtype="Connector" uid="Connector-712" startpinid="Node-371-2" endpinid="LedBar-321-led37-pinP" pointList="320,144,320,144" />
+
+	<item itemtype="Connector" uid="Connector-714" startpinid="Node-371-1" endpinid="Node-372-0" pointList="320,144,320,152" />
+
+	<item itemtype="Connector" uid="Connector-715" startpinid="Node-372-2" endpinid="LedBar-321-led38-pinP" pointList="320,152,320,152" />
+
+	<item itemtype="Connector" uid="Connector-717" startpinid="Node-372-1" endpinid="Node-373-0" pointList="320,152,320,160" />
+
+	<item itemtype="Connector" uid="Connector-718" startpinid="Node-373-2" endpinid="LedBar-321-led39-pinP" pointList="320,160,320,160" />
+
+	<item itemtype="Connector" uid="Connector-720" startpinid="Node-373-1" endpinid="Node-374-0" pointList="320,160,320,168" />
+
+	<item itemtype="Connector" uid="Connector-721" startpinid="Node-374-2" endpinid="LedBar-321-led40-pinP" pointList="320,168,320,168" />
+
+	<item itemtype="Connector" uid="Connector-723" startpinid="Node-374-1" endpinid="Node-375-0" pointList="320,168,320,176" />
+
+	<item itemtype="Connector" uid="Connector-724" startpinid="Node-375-2" endpinid="LedBar-321-led41-pinP" pointList="320,176,320,176" />
+
+	<item itemtype="Connector" uid="Connector-726" startpinid="Node-375-1" endpinid="Node-376-0" pointList="320,176,320,184" />
+
+	<item itemtype="Connector" uid="Connector-727" startpinid="Node-376-2" endpinid="LedBar-321-led42-pinP" pointList="320,184,320,184" />
+
+	<item itemtype="Connector" uid="Connector-729" startpinid="Node-376-1" endpinid="Node-377-0" pointList="320,184,320,192" />
+
+	<item itemtype="Connector" uid="Connector-730" startpinid="Node-377-2" endpinid="LedBar-321-led43-pinP" pointList="320,192,320,192" />
+
+	<item itemtype="Connector" uid="Connector-732" startpinid="Node-377-1" endpinid="Node-378-0" pointList="320,192,320,200" />
+
+	<item itemtype="Connector" uid="Connector-733" startpinid="Node-378-2" endpinid="LedBar-321-led44-pinP" pointList="320,200,320,200" />
+
+	<item itemtype="Connector" uid="Connector-735" startpinid="Node-378-1" endpinid="Node-379-0" pointList="320,200,320,208" />
+
+	<item itemtype="Connector" uid="Connector-736" startpinid="Node-379-2" endpinid="LedBar-321-led45-pinP" pointList="320,208,320,208" />
+
+	<item itemtype="Connector" uid="Connector-738" startpinid="Node-379-1" endpinid="Node-380-0" pointList="320,208,320,216" />
+
+	<item itemtype="Connector" uid="Connector-739" startpinid="Node-380-2" endpinid="LedBar-321-led46-pinP" pointList="320,216,320,216" />
+
+	<item itemtype="Connector" uid="Connector-741" startpinid="Node-380-1" endpinid="Node-381-0" pointList="320,216,320,224" />
+
+	<item itemtype="Connector" uid="Connector-742" startpinid="Node-381-2" endpinid="LedBar-321-led47-pinP" pointList="320,224,320,224" />
+
+	<item itemtype="Connector" uid="Connector-744" startpinid="Node-381-1" endpinid="Node-382-0" pointList="320,224,320,232" />
+
+	<item itemtype="Connector" uid="Connector-745" startpinid="Node-382-2" endpinid="LedBar-321-led48-pinP" pointList="320,232,320,232" />
+
+	<item itemtype="Connector" uid="Connector-747" startpinid="Node-382-1" endpinid="Node-383-0" pointList="320,232,320,240" />
+
+	<item itemtype="Connector" uid="Connector-748" startpinid="Node-383-2" endpinid="LedBar-321-led49-pinP" pointList="320,240,320,240" />
+
+	<item itemtype="Connector" uid="Connector-750" startpinid="Node-383-1" endpinid="Node-384-0" pointList="320,240,320,248" />
+
+	<item itemtype="Connector" uid="Connector-751" startpinid="Node-384-2" endpinid="LedBar-321-led50-pinP" pointList="320,248,320,248" />
+
+	<item itemtype="Connector" uid="Connector-753" startpinid="Node-384-1" endpinid="Node-385-0" pointList="320,248,320,256" />
+
+	<item itemtype="Connector" uid="Connector-754" startpinid="Node-385-2" endpinid="LedBar-321-led51-pinP" pointList="320,256,320,256" />
+
+	<item itemtype="Connector" uid="Connector-756" startpinid="Node-385-1" endpinid="Node-386-0" pointList="320,256,320,264" />
+
+	<item itemtype="Connector" uid="Connector-757" startpinid="Node-386-2" endpinid="LedBar-321-led52-pinP" pointList="320,264,320,264" />
+
+	<item itemtype="Connector" uid="Connector-759" startpinid="Node-386-1" endpinid="Node-387-0" pointList="320,264,320,272" />
+
+	<item itemtype="Connector" uid="Connector-760" startpinid="Node-387-2" endpinid="LedBar-321-led53-pinP" pointList="320,272,320,272" />
+
+	<item itemtype="Connector" uid="Connector-762" startpinid="Node-387-1" endpinid="Node-388-0" pointList="320,272,320,280" />
+
+	<item itemtype="Connector" uid="Connector-763" startpinid="Node-388-2" endpinid="LedBar-321-led54-pinP" pointList="320,280,320,280" />
+
+	<item itemtype="Connector" uid="Connector-765" startpinid="Node-388-1" endpinid="Node-389-0" pointList="320,280,320,288" />
+
+	<item itemtype="Connector" uid="Connector-766" startpinid="Node-389-2" endpinid="LedBar-321-led55-pinP" pointList="320,288,320,288" />
+
+	<item itemtype="Connector" uid="Connector-768" startpinid="Node-389-1" endpinid="Node-390-0" pointList="320,288,320,296" />
+
+	<item itemtype="Connector" uid="Connector-769" startpinid="Node-390-2" endpinid="LedBar-321-led56-pinP" pointList="320,296,320,296" />
+
+	<item itemtype="Connector" uid="Connector-771" startpinid="Node-390-1" endpinid="Node-391-0" pointList="320,296,320,304" />
+
+	<item itemtype="Connector" uid="Connector-772" startpinid="Node-391-2" endpinid="LedBar-321-led57-pinP" pointList="320,304,320,304" />
+
+	<item itemtype="Connector" uid="Connector-774" startpinid="Node-391-1" endpinid="Node-392-0" pointList="320,304,320,312" />
+
+	<item itemtype="Connector" uid="Connector-775" startpinid="Node-392-2" endpinid="LedBar-321-led58-pinP" pointList="320,312,320,312" />
+
+	<item itemtype="Connector" uid="Connector-777" startpinid="Node-392-1" endpinid="Node-393-0" pointList="320,312,320,320" />
+
+	<item itemtype="Connector" uid="Connector-778" startpinid="Node-393-2" endpinid="LedBar-321-led59-pinP" pointList="320,320,320,320" />
+
+	<item itemtype="Connector" uid="Connector-780" startpinid="Node-393-1" endpinid="Node-394-0" pointList="320,320,320,328" />
+
+	<item itemtype="Connector" uid="Connector-781" startpinid="Node-394-2" endpinid="LedBar-321-led60-pinP" pointList="320,328,320,328" />
+
+	<item itemtype="Connector" uid="Connector-783" startpinid="Node-394-1" endpinid="Node-395-0" pointList="320,328,320,336" />
+
+	<item itemtype="Connector" uid="Connector-784" startpinid="Node-395-2" endpinid="LedBar-321-led61-pinP" pointList="320,336,320,336" />
+
+	<item itemtype="Connector" uid="Connector-786" startpinid="Node-395-1" endpinid="Node-396-0" pointList="320,336,320,344" />
+
+	<item itemtype="Connector" uid="Connector-787" startpinid="Node-396-2" endpinid="LedBar-321-led62-pinP" pointList="320,344,320,344" />
+
+	<item itemtype="Connector" uid="Connector-789" startpinid="Node-396-1" endpinid="Node-397-0" pointList="320,344,320,352" />
+
+	<item itemtype="Connector" uid="Connector-790" startpinid="Node-397-2" endpinid="LedBar-321-led63-pinP" pointList="320,352,320,352" />
+
+	<item itemtype="Connector" uid="Connector-792" startpinid="Node-397-1" endpinid="Node-398-0" pointList="320,352,320,360" />
+
+	<item itemtype="Connector" uid="Connector-793" startpinid="Node-398-2" endpinid="LedBar-321-led64-pinP" pointList="320,360,320,360" />
+
+	<item itemtype="Connector" uid="Connector-795" startpinid="Node-398-1" endpinid="Node-399-0" pointList="320,360,320,368" />
+
+	<item itemtype="Connector" uid="Connector-796" startpinid="Node-399-2" endpinid="LedBar-321-led65-pinP" pointList="320,368,320,368" />
+
+	<item itemtype="Connector" uid="Connector-798" startpinid="Node-399-1" endpinid="Node-400-0" pointList="320,368,320,376" />
+
+	<item itemtype="Connector" uid="Connector-799" startpinid="Node-400-2" endpinid="LedBar-321-led66-pinP" pointList="320,376,320,376" />
+
+	<item itemtype="Connector" uid="Connector-801" startpinid="Node-400-1" endpinid="Node-401-0" pointList="320,376,320,384" />
+
+	<item itemtype="Connector" uid="Connector-802" startpinid="Node-401-2" endpinid="LedBar-321-led67-pinP" pointList="320,384,320,384" />
+
+	<item itemtype="Connector" uid="Connector-804" startpinid="Node-401-1" endpinid="Node-402-0" pointList="320,384,320,392" />
+
+	<item itemtype="Connector" uid="Connector-805" startpinid="Node-402-2" endpinid="LedBar-321-led68-pinP" pointList="320,392,320,392" />
+
+	<item itemtype="Connector" uid="Connector-807" startpinid="Node-402-1" endpinid="Node-403-0" pointList="320,392,320,400" />
+
+	<item itemtype="Connector" uid="Connector-808" startpinid="Node-403-2" endpinid="LedBar-321-led69-pinP" pointList="320,400,320,400" />
+
+	<item itemtype="Connector" uid="Connector-810" startpinid="Node-403-1" endpinid="Node-404-0" pointList="320,400,320,408" />
+
+	<item itemtype="Connector" uid="Connector-811" startpinid="Node-404-2" endpinid="LedBar-321-led70-pinP" pointList="320,408,320,408" />
+
+	<item itemtype="Connector" uid="Connector-813" startpinid="Node-404-1" endpinid="Node-405-0" pointList="320,408,320,416" />
+
+	<item itemtype="Connector" uid="Connector-814" startpinid="Node-405-2" endpinid="LedBar-321-led71-pinP" pointList="320,416,320,416" />
+
+	<item itemtype="Connector" uid="Connector-816" startpinid="Node-405-1" endpinid="Node-406-0" pointList="320,416,320,424" />
+
+	<item itemtype="Connector" uid="Connector-817" startpinid="Node-406-2" endpinid="LedBar-321-led72-pinP" pointList="320,424,320,424" />
+
+	<item itemtype="Connector" uid="Connector-819" startpinid="Node-406-1" endpinid="Node-407-0" pointList="320,424,320,432" />
+
+	<item itemtype="Connector" uid="Connector-820" startpinid="Node-407-2" endpinid="LedBar-321-led73-pinP" pointList="320,432,320,432" />
+
+	<item itemtype="Connector" uid="Connector-822" startpinid="Node-407-1" endpinid="Node-408-0" pointList="320,432,320,440" />
+
+	<item itemtype="Connector" uid="Connector-823" startpinid="Node-408-2" endpinid="LedBar-321-led74-pinP" pointList="320,440,320,440" />
+
+	<item itemtype="Connector" uid="Connector-825" startpinid="Node-408-1" endpinid="Node-409-0" pointList="320,440,320,448" />
+
+	<item itemtype="Connector" uid="Connector-826" startpinid="Node-409-2" endpinid="LedBar-321-led75-pinP" pointList="320,448,320,448" />
+
+	<item itemtype="Connector" uid="Connector-828" startpinid="Node-409-1" endpinid="Node-410-0" pointList="320,448,320,456" />
+
+	<item itemtype="Connector" uid="Connector-829" startpinid="Node-410-2" endpinid="LedBar-321-led76-pinP" pointList="320,456,320,456" />
+
+	<item itemtype="Connector" uid="Connector-831" startpinid="Node-410-1" endpinid="Node-411-0" pointList="320,456,320,464" />
+
+	<item itemtype="Connector" uid="Connector-832" startpinid="Node-411-2" endpinid="LedBar-321-led77-pinP" pointList="320,464,320,464" />
+
+	<item itemtype="Connector" uid="Connector-833" startpinid="Node-412-1" endpinid="LedBar-321-led79-pinP" pointList="320,472,320,480" />
+
+	<item itemtype="Connector" uid="Connector-834" startpinid="Node-411-1" endpinid="Node-412-0" pointList="320,464,320,472" />
+
+	<item itemtype="Connector" uid="Connector-835" startpinid="Node-412-2" endpinid="LedBar-321-led78-pinP" pointList="320,472,320,472" />
+
+	<item itemtype="Connector" uid="Connector-836" startpinid="Tunnel-324-pin" endpinid="Mega-1-25" pointList="452,-724,452,-724" />
+
+	<item itemtype="Connector" uid="Connector-840" startpinid="Tunnel-414-pin" endpinid="RelaySPST-331-inductor-lPin" pointList="404,-956,404,-956" />
+
+	<item itemtype="Connector" uid="Connector-841" startpinid="Tunnel-416-pin" endpinid="RelaySPST-331-inductor-rPin" pointList="440,-956,436,-956" />
+
+	<item itemtype="Connector" uid="Connector-843" startpinid="Tunnel-420-pin" endpinid="RelaySPST-331-pinP2" pointList="396,-972,404,-972" />
+
+	<item itemtype="Connector" uid="Connector-844" startpinid="Tunnel-418-pin" endpinid="RelaySPST-331-switch0pinN" pointList="436,-972,436,-972" />
+
+	<item itemtype="Connector" uid="Connector-845" startpinid="Tunnel-421-pin" endpinid="Node-422-1" pointList="320,-160,320,-148" />
+
+	<item itemtype="Connector" uid="Connector-846" startpinid="Node-335-0" endpinid="Node-422-0" pointList="320,-144,320,-148" />
+
+	<item itemtype="Connector" uid="Connector-847" startpinid="Node-422-2" endpinid="LedBar-321-led0-pinP" pointList="320,-148,320,-152" />
+
+	<item itemtype="Connector" uid="Connector-842" startpinid="Fixed Voltage-419-outnod" endpinid="Tunnel-417-pin" pointList="436,-1016,436,-1016" />
+
+	<item itemtype="Connector" uid="Connector-1245" startpinid="Tunnel-585-pin" endpinid="RelaySPST-589-inductor-rPin" pointList="540,-956,536,-956" />
+
+	<item itemtype="Connector" uid="Connector-1246" startpinid="Tunnel-587-pin" endpinid="RelaySPST-589-pinP2" pointList="496,-972,504,-972" />
+
+	<item itemtype="Connector" uid="Connector-1247" startpinid="Tunnel-586-pin" endpinid="RelaySPST-589-inductor-lPin" pointList="504,-956,504,-956" />
+
+	<item itemtype="Connector" uid="Connector-1248" startpinid="Tunnel-588-pin" endpinid="RelaySPST-589-switch0pinN" pointList="536,-972,536,-972" />
+
+	<item itemtype="Connector" uid="Connector-1249" startpinid="Tunnel-590-pin" endpinid="RelaySPST-594-inductor-rPin" pointList="336,-956,332,-956" />
+
+	<item itemtype="Connector" uid="Connector-1250" startpinid="Tunnel-592-pin" endpinid="RelaySPST-594-pinP2" pointList="292,-972,300,-972" />
+
+	<item itemtype="Connector" uid="Connector-1251" startpinid="Tunnel-591-pin" endpinid="RelaySPST-594-inductor-lPin" pointList="300,-956,300,-956" />
+
+	<item itemtype="Connector" uid="Connector-1252" startpinid="Tunnel-593-pin" endpinid="RelaySPST-594-switch0pinN" pointList="332,-972,332,-972" />
+
+	<item itemtype="Connector" uid="Connector-1253" startpinid="Tunnel-595-pin" endpinid="Mega-1-24" pointList="460,-724,460,-724" />
+
+	<item itemtype="Connector" uid="Connector-1254" startpinid="Tunnel-596-pin" endpinid="Mega-1-23" pointList="468,-724,468,-724" />
+
+	<item itemtype="Connector" uid="Connector-1255" startpinid="Node-625-1" endpinid="Node-664-0" pointList="344,344,344,352" />
+
+	<item itemtype="Connector" uid="Connector-1256" startpinid="Node-619-0" endpinid="Node-673-0" pointList="344,-144,344,-148" />
+
+	<item itemtype="Connector" uid="Connector-1257" startpinid="Node-664-2" endpinid="LedBar-668-led63-pinP" pointList="344,352,344,352" />
+
+	<item itemtype="Connector" uid="Connector-1258" startpinid="Node-602-2" endpinid="LedBar-668-led44-pinP" pointList="344,200,344,200" />
+
+	<item itemtype="Connector" uid="Connector-1259" startpinid="Node-616-2" endpinid="LedBar-668-led45-pinP" pointList="344,208,344,208" />
+
+	<item itemtype="Connector" uid="Connector-1260" startpinid="Node-627-1" endpinid="Node-597-0" pointList="344,40,344,48" />
+
+	<item itemtype="Connector" uid="Connector-1261" startpinid="Node-676-1" endpinid="Node-606-0" pointList="344,-120,344,-112" />
+
+	<item itemtype="Connector" uid="Connector-1262" startpinid="Node-633-2" endpinid="LedBar-668-led3-pinP" pointList="344,-128,344,-128" />
+
+	<item itemtype="Connector" uid="Connector-1263" startpinid="Node-661-2" endpinid="LedBar-668-led51-pinP" pointList="344,256,344,256" />
+
+	<item itemtype="Connector" uid="Connector-1264" startpinid="Node-621-1" endpinid="Node-637-0" pointList="344,368,344,376" />
+
+	<item itemtype="Connector" uid="Connector-1265" startpinid="Node-646-1" endpinid="Node-632-0" pointList="344,-64,344,-56" />
+
+	<item itemtype="Connector" uid="Connector-1266" startpinid="Node-625-2" endpinid="LedBar-668-led62-pinP" pointList="344,344,344,344" />
+
+	<item itemtype="Connector" uid="Connector-1267" startpinid="Node-615-1" endpinid="Node-631-0" pointList="344,-80,344,-72" />
+
+	<item itemtype="Connector" uid="Connector-1268" startpinid="Node-629-2" endpinid="LedBar-668-led8-pinP" pointList="344,-88,344,-88" />
+
+	<item itemtype="Connector" uid="Connector-1269" startpinid="Node-663-1" endpinid="Node-629-0" pointList="344,-96,344,-88" />
+
+	<item itemtype="Connector" uid="Connector-1270" startpinid="Node-672-2" endpinid="LedBar-668-led30-pinP" pointList="344,88,344,88" />
+
+	<item itemtype="Connector" uid="Connector-1271" startpinid="Node-648-2" endpinid="LedBar-668-led50-pinP" pointList="344,248,344,248" />
+
+	<item itemtype="Connector" uid="Connector-1272" startpinid="Node-660-1" endpinid="Node-671-0" pointList="344,272,344,280" />
+
+	<item itemtype="Connector" uid="Connector-1273" startpinid="Node-631-1" endpinid="Node-646-0" pointList="344,-72,344,-64" />
+
+	<item itemtype="Connector" uid="Connector-1274" startpinid="Node-609-2" endpinid="LedBar-668-led41-pinP" pointList="344,176,344,176" />
+
+	<item itemtype="Connector" uid="Connector-1275" startpinid="Node-620-2" endpinid="LedBar-668-led16-pinP" pointList="344,-24,344,-24" />
+
+	<item itemtype="Connector" uid="Connector-1276" startpinid="Node-631-2" endpinid="LedBar-668-led10-pinP" pointList="344,-72,344,-72" />
+
+	<item itemtype="Connector" uid="Connector-1277" startpinid="Node-667-1" endpinid="Node-647-0" pointList="344,328,344,336" />
+
+	<item itemtype="Connector" uid="Connector-1278" startpinid="Node-654-1" endpinid="Node-656-0" pointList="344,64,344,72" />
+
+	<item itemtype="Connector" uid="Connector-1279" startpinid="Node-653-1" endpinid="Node-627-0" pointList="344,32,344,40" />
+
+	<item itemtype="Connector" uid="Connector-1280" startpinid="Node-636-2" endpinid="LedBar-668-led43-pinP" pointList="344,192,344,192" />
+
+	<item itemtype="Connector" uid="Connector-1281" startpinid="Tunnel-666-pin" endpinid="Node-673-1" pointList="344,-160,344,-148" />
+
+	<item itemtype="Connector" uid="Connector-1282" startpinid="Node-642-1" endpinid="Node-609-0" pointList="344,168,344,176" />
+
+	<item itemtype="Connector" uid="Connector-1283" startpinid="Node-615-2" endpinid="LedBar-668-led9-pinP" pointList="344,-80,344,-80" />
+
+	<item itemtype="Connector" uid="Connector-1284" startpinid="Node-674-2" endpinid="LedBar-668-led17-pinP" pointList="344,-16,344,-16" />
+
+	<item itemtype="Connector" uid="Connector-1285" startpinid="Node-600-2" endpinid="LedBar-668-led52-pinP" pointList="344,264,344,264" />
+
+	<item itemtype="Connector" uid="Connector-1286" startpinid="Node-632-1" endpinid="Node-662-0" pointList="344,-56,344,-48" />
+
+	<item itemtype="Connector" uid="Connector-1287" startpinid="Node-658-2" endpinid="LedBar-668-led75-pinP" pointList="344,448,344,448" />
+
+	<item itemtype="Connector" uid="Connector-1288" startpinid="Node-606-1" endpinid="Node-675-0" pointList="344,-112,344,-104" />
+
+	<item itemtype="Connector" uid="Connector-1289" startpinid="Node-627-2" endpinid="LedBar-668-led24-pinP" pointList="344,40,344,40" />
+
+	<item itemtype="Connector" uid="Connector-1290" startpinid="Node-676-2" endpinid="LedBar-668-led4-pinP" pointList="344,-120,344,-120" />
+
+	<item itemtype="Connector" uid="Connector-1291" startpinid="Node-605-1" endpinid="Node-623-0" pointList="344,288,344,296" />
+
+	<item itemtype="Connector" uid="Connector-1292" startpinid="Node-599-1" endpinid="Node-614-0" pointList="344,16,344,24" />
+
+	<item itemtype="Connector" uid="Connector-1293" startpinid="Node-655-1" endpinid="Node-634-0" pointList="344,136,344,144" />
+
+	<item itemtype="Connector" uid="Connector-1294" startpinid="Node-669-2" endpinid="LedBar-668-led20-pinP" pointList="344,8,344,8" />
+
+	<item itemtype="Connector" uid="Connector-1295" startpinid="Node-629-1" endpinid="Node-615-0" pointList="344,-88,344,-80" />
+
+	<item itemtype="Connector" uid="Connector-1296" startpinid="Node-677-1" endpinid="Node-607-0" pointList="344,456,344,464" />
+
+	<item itemtype="Connector" uid="Connector-1297" startpinid="Node-638-1" endpinid="Node-643-0" pointList="344,-40,344,-32" />
+
+	<item itemtype="Connector" uid="Connector-1298" startpinid="Node-657-1" endpinid="Node-633-0" pointList="344,-136,344,-128" />
+
+	<item itemtype="Connector" uid="Connector-1299" startpinid="Node-671-1" endpinid="Node-605-0" pointList="344,280,344,288" />
+
+	<item itemtype="Connector" uid="Connector-1300" startpinid="Node-623-2" endpinid="LedBar-668-led56-pinP" pointList="344,296,344,296" />
+
+	<item itemtype="Connector" uid="Connector-1301" startpinid="Node-644-2" endpinid="LedBar-668-led69-pinP" pointList="344,400,344,400" />
+
+	<item itemtype="Connector" uid="Connector-1302" startpinid="Node-628-2" endpinid="LedBar-668-led48-pinP" pointList="344,232,344,232" />
+
+	<item itemtype="Connector" uid="Connector-1303" startpinid="Node-610-1" endpinid="Node-636-0" pointList="344,184,344,192" />
+
+	<item itemtype="Connector" uid="Connector-1304" startpinid="Node-652-2" endpinid="LedBar-668-led78-pinP" pointList="344,472,344,472" />
+
+	<item itemtype="Connector" uid="Connector-1305" startpinid="Node-622-1" endpinid="Node-642-0" pointList="344,160,344,168" />
+
+	<item itemtype="Connector" uid="Connector-1306" startpinid="Node-662-2" endpinid="LedBar-668-led13-pinP" pointList="344,-48,344,-48" />
+
+	<item itemtype="Connector" uid="Connector-1307" startpinid="Node-621-2" endpinid="LedBar-668-led65-pinP" pointList="344,368,344,368" />
+
+	<item itemtype="Connector" uid="Connector-1308" startpinid="Node-674-1" endpinid="Node-626-0" pointList="344,-16,344,-8" />
+
+	<item itemtype="Connector" uid="Connector-1309" startpinid="Node-664-1" endpinid="Node-612-0" pointList="344,352,344,360" />
+
+	<item itemtype="Connector" uid="Connector-1310" startpinid="Node-650-1" endpinid="Node-659-0" pointList="344,408,344,416" />
+
+	<item itemtype="Connector" uid="Connector-1311" startpinid="Node-597-1" endpinid="Node-618-0" pointList="344,48,344,56" />
+
+	<item itemtype="Connector" uid="Connector-1312" startpinid="Node-617-1" endpinid="Node-655-0" pointList="344,128,344,136" />
+
+	<item itemtype="Connector" uid="Connector-1313" startpinid="Node-598-2" endpinid="LedBar-668-led58-pinP" pointList="344,312,344,312" />
+
+	<item itemtype="Connector" uid="Connector-1314" startpinid="Node-642-2" endpinid="LedBar-668-led40-pinP" pointList="344,168,344,168" />
+
+	<item itemtype="Connector" uid="Connector-1315" startpinid="Node-655-2" endpinid="LedBar-668-led36-pinP" pointList="344,136,344,136" />
+
+	<item itemtype="Connector" uid="Connector-1316" startpinid="Node-607-2" endpinid="LedBar-668-led77-pinP" pointList="344,464,344,464" />
+
+	<item itemtype="Connector" uid="Connector-1317" startpinid="Node-614-2" endpinid="LedBar-668-led22-pinP" pointList="344,24,344,24" />
+
+	<item itemtype="Connector" uid="Connector-1318" startpinid="Node-651-1" endpinid="Node-640-0" pointList="344,104,344,112" />
+
+	<item itemtype="Connector" uid="Connector-1319" startpinid="Node-646-2" endpinid="LedBar-668-led11-pinP" pointList="344,-64,344,-64" />
+
+	<item itemtype="Connector" uid="Connector-1320" startpinid="Node-608-1" endpinid="Node-639-0" pointList="344,432,344,440" />
+
+	<item itemtype="Connector" uid="Connector-1321" startpinid="Node-623-1" endpinid="Node-613-0" pointList="344,296,344,304" />
+
+	<item itemtype="Connector" uid="Connector-1322" startpinid="Node-602-1" endpinid="Node-616-0" pointList="344,200,344,208" />
+
+	<item itemtype="Connector" uid="Connector-1323" startpinid="Node-663-2" endpinid="LedBar-668-led7-pinP" pointList="344,-96,344,-96" />
+
+	<item itemtype="Connector" uid="Connector-1324" startpinid="Node-624-1" endpinid="Node-603-0" pointList="344,216,344,224" />
+
+	<item itemtype="Connector" uid="Connector-1325" startpinid="Node-612-2" endpinid="LedBar-668-led64-pinP" pointList="344,360,344,360" />
+
+	<item itemtype="Connector" uid="Connector-1326" startpinid="Node-635-2" endpinid="LedBar-668-led19-pinP" pointList="344,0,344,0" />
+
+	<item itemtype="Connector" uid="Connector-1327" startpinid="Node-641-2" endpinid="LedBar-668-led31-pinP" pointList="344,96,344,96" />
+
+	<item itemtype="Connector" uid="Connector-1328" startpinid="Node-601-1" endpinid="Node-630-0" pointList="344,384,344,392" />
+
+	<item itemtype="Connector" uid="Connector-1329" startpinid="Node-656-2" endpinid="LedBar-668-led28-pinP" pointList="344,72,344,72" />
+
+	<item itemtype="Connector" uid="Connector-1330" startpinid="Node-620-1" endpinid="Node-674-0" pointList="344,-24,344,-16" />
+
+	<item itemtype="Connector" uid="Connector-1331" startpinid="Node-614-1" endpinid="Node-653-0" pointList="344,24,344,32" />
+
+	<item itemtype="Connector" uid="Connector-1332" startpinid="Node-601-2" endpinid="LedBar-668-led67-pinP" pointList="344,384,344,384" />
+
+	<item itemtype="Connector" uid="Connector-1333" startpinid="Node-635-1" endpinid="Node-669-0" pointList="344,0,344,8" />
+
+	<item itemtype="Connector" uid="Connector-1334" startpinid="Node-662-1" endpinid="Node-638-0" pointList="344,-48,344,-40" />
+
+	<item itemtype="Connector" uid="Connector-1335" startpinid="Node-648-1" endpinid="Node-661-0" pointList="344,248,344,256" />
+
+	<item itemtype="Connector" uid="Connector-1336" startpinid="Node-672-1" endpinid="Node-641-0" pointList="344,88,344,96" />
+
+	<item itemtype="Connector" uid="Connector-1337" startpinid="Node-651-2" endpinid="LedBar-668-led32-pinP" pointList="344,104,344,104" />
+
+	<item itemtype="Connector" uid="Connector-1338" startpinid="Node-638-2" endpinid="LedBar-668-led14-pinP" pointList="344,-40,344,-40" />
+
+	<item itemtype="Connector" uid="Connector-1339" startpinid="Node-661-1" endpinid="Node-600-0" pointList="344,256,344,264" />
+
+	<item itemtype="Connector" uid="Connector-1340" startpinid="Node-607-1" endpinid="Node-652-0" pointList="344,464,344,472" />
+
+	<item itemtype="Connector" uid="Connector-1341" startpinid="Node-606-2" endpinid="LedBar-668-led5-pinP" pointList="344,-112,344,-112" />
+
+	<item itemtype="Connector" uid="Connector-1342" startpinid="Node-659-1" endpinid="Node-670-0" pointList="344,416,344,424" />
+
+	<item itemtype="Connector" uid="Connector-1343" startpinid="Node-671-2" endpinid="LedBar-668-led54-pinP" pointList="344,280,344,280" />
+
+	<item itemtype="Connector" uid="Connector-1344" startpinid="Node-626-2" endpinid="LedBar-668-led18-pinP" pointList="344,-8,344,-8" />
+
+	<item itemtype="Connector" uid="Connector-1345" startpinid="Node-647-1" endpinid="Node-625-0" pointList="344,336,344,344" />
+
+	<item itemtype="Connector" uid="Connector-1346" startpinid="Node-611-1" endpinid="Node-667-0" pointList="344,320,344,328" />
+
+	<item itemtype="Connector" uid="Connector-1347" startpinid="Node-641-1" endpinid="Node-651-0" pointList="344,96,344,104" />
+
+	<item itemtype="Connector" uid="Connector-1348" startpinid="Node-643-2" endpinid="LedBar-668-led15-pinP" pointList="344,-32,344,-32" />
+
+	<item itemtype="Connector" uid="Connector-1349" startpinid="Node-630-1" endpinid="Node-644-0" pointList="344,392,344,400" />
+
+	<item itemtype="Connector" uid="Connector-1350" startpinid="Node-624-2" endpinid="LedBar-668-led46-pinP" pointList="344,216,344,216" />
+
+	<item itemtype="Connector" uid="Connector-1351" startpinid="Node-618-1" endpinid="Node-654-0" pointList="344,56,344,64" />
+
+	<item itemtype="Connector" uid="Connector-1352" startpinid="Node-657-2" endpinid="LedBar-668-led2-pinP" pointList="344,-136,344,-136" />
+
+	<item itemtype="Connector" uid="Connector-1353" startpinid="Node-677-2" endpinid="LedBar-668-led76-pinP" pointList="344,456,344,456" />
+
+	<item itemtype="Connector" uid="Connector-1354" startpinid="Node-598-1" endpinid="Node-611-0" pointList="344,312,344,320" />
+
+	<item itemtype="Connector" uid="Connector-1355" startpinid="Node-619-2" endpinid="LedBar-668-led1-pinP" pointList="344,-144,344,-144" />
+
+	<item itemtype="Connector" uid="Connector-1356" startpinid="Node-613-2" endpinid="LedBar-668-led57-pinP" pointList="344,304,344,304" />
+
+	<item itemtype="Connector" uid="Connector-1357" startpinid="Node-628-1" endpinid="Node-665-0" pointList="344,232,344,240" />
+
+	<item itemtype="Connector" uid="Connector-1358" startpinid="Node-611-2" endpinid="LedBar-668-led59-pinP" pointList="344,320,344,320" />
+
+	<item itemtype="Connector" uid="Connector-1359" startpinid="Node-647-2" endpinid="LedBar-668-led61-pinP" pointList="344,336,344,336" />
+
+	<item itemtype="Connector" uid="Connector-1360" startpinid="Node-640-2" endpinid="LedBar-668-led33-pinP" pointList="344,112,344,112" />
+
+	<item itemtype="Connector" uid="Connector-1361" startpinid="Node-597-2" endpinid="LedBar-668-led25-pinP" pointList="344,48,344,48" />
+
+	<item itemtype="Connector" uid="Connector-1362" startpinid="Node-644-1" endpinid="Node-650-0" pointList="344,400,344,408" />
+
+	<item itemtype="Connector" uid="Connector-1363" startpinid="Node-649-2" endpinid="LedBar-668-led29-pinP" pointList="344,80,344,80" />
+
+	<item itemtype="Connector" uid="Connector-1364" startpinid="Node-669-1" endpinid="Node-599-0" pointList="344,8,344,16" />
+
+	<item itemtype="Connector" uid="Connector-1365" startpinid="Node-665-1" endpinid="Node-648-0" pointList="344,240,344,248" />
+
+	<item itemtype="Connector" uid="Connector-1366" startpinid="Node-675-1" endpinid="Node-663-0" pointList="344,-104,344,-96" />
+
+	<item itemtype="Connector" uid="Connector-1367" startpinid="Node-667-2" endpinid="LedBar-668-led60-pinP" pointList="344,328,344,328" />
+
+	<item itemtype="Connector" uid="Connector-1368" startpinid="Node-650-2" endpinid="LedBar-668-led70-pinP" pointList="344,408,344,408" />
+
+	<item itemtype="Connector" uid="Connector-1369" startpinid="Node-603-1" endpinid="Node-628-0" pointList="344,224,344,232" />
+
+	<item itemtype="Connector" uid="Connector-1370" startpinid="Node-654-2" endpinid="LedBar-668-led27-pinP" pointList="344,64,344,64" />
+
+	<item itemtype="Connector" uid="Connector-1371" startpinid="Node-608-2" endpinid="LedBar-668-led73-pinP" pointList="344,432,344,432" />
+
+	<item itemtype="Connector" uid="Connector-1372" startpinid="Node-612-1" endpinid="Node-621-0" pointList="344,360,344,368" />
+
+	<item itemtype="Connector" uid="Connector-1373" startpinid="Node-618-2" endpinid="LedBar-668-led26-pinP" pointList="344,56,344,56" />
+
+	<item itemtype="Connector" uid="Connector-1374" startpinid="Node-637-2" endpinid="LedBar-668-led66-pinP" pointList="344,376,344,376" />
+
+	<item itemtype="Connector" uid="Connector-1375" startpinid="Node-599-2" endpinid="LedBar-668-led21-pinP" pointList="344,16,344,16" />
+
+	<item itemtype="Connector" uid="Connector-1376" startpinid="Node-649-1" endpinid="Node-672-0" pointList="344,80,344,88" />
+
+	<item itemtype="Connector" uid="Connector-1377" startpinid="Node-622-2" endpinid="LedBar-668-led39-pinP" pointList="344,160,344,160" />
+
+	<item itemtype="Connector" uid="Connector-1378" startpinid="Node-610-2" endpinid="LedBar-668-led42-pinP" pointList="344,184,344,184" />
+
+	<item itemtype="Connector" uid="Connector-1379" startpinid="Node-675-2" endpinid="LedBar-668-led6-pinP" pointList="344,-104,344,-104" />
+
+	<item itemtype="Connector" uid="Connector-1380" startpinid="Node-670-2" endpinid="LedBar-668-led72-pinP" pointList="344,424,344,424" />
+
+	<item itemtype="Connector" uid="Connector-1381" startpinid="Node-617-2" endpinid="LedBar-668-led35-pinP" pointList="344,128,344,128" />
+
+	<item itemtype="Connector" uid="Connector-1382" startpinid="Node-665-2" endpinid="LedBar-668-led49-pinP" pointList="344,240,344,240" />
+
+	<item itemtype="Connector" uid="Connector-1383" startpinid="Node-652-1" endpinid="LedBar-668-led79-pinP" pointList="344,472,344,480" />
+
+	<item itemtype="Connector" uid="Connector-1384" startpinid="Node-659-2" endpinid="LedBar-668-led71-pinP" pointList="344,416,344,416" />
+
+	<item itemtype="Connector" uid="Connector-1385" startpinid="Node-645-2" endpinid="LedBar-668-led38-pinP" pointList="344,152,344,152" />
+
+	<item itemtype="Connector" uid="Connector-1386" startpinid="Node-613-1" endpinid="Node-598-0" pointList="344,304,344,312" />
+
+	<item itemtype="Connector" uid="Connector-1387" startpinid="Node-632-2" endpinid="LedBar-668-led12-pinP" pointList="344,-56,344,-56" />
+
+	<item itemtype="Connector" uid="Connector-1388" startpinid="Node-616-1" endpinid="Node-624-0" pointList="344,208,344,216" />
+
+	<item itemtype="Connector" uid="Connector-1389" startpinid="Node-660-2" endpinid="LedBar-668-led53-pinP" pointList="344,272,344,272" />
+
+	<item itemtype="Connector" uid="Connector-1390" startpinid="Node-605-2" endpinid="LedBar-668-led55-pinP" pointList="344,288,344,288" />
+
+	<item itemtype="Connector" uid="Connector-1391" startpinid="Node-609-1" endpinid="Node-610-0" pointList="344,176,344,184" />
+
+	<item itemtype="Connector" uid="Connector-1392" startpinid="Node-630-2" endpinid="LedBar-668-led68-pinP" pointList="344,392,344,392" />
+
+	<item itemtype="Connector" uid="Connector-1393" startpinid="Node-636-1" endpinid="Node-602-0" pointList="344,192,344,200" />
+
+	<item itemtype="Connector" uid="Connector-1394" startpinid="Node-619-1" endpinid="Node-657-0" pointList="344,-144,344,-136" />
+
+	<item itemtype="Connector" uid="Connector-1395" startpinid="Node-656-1" endpinid="Node-649-0" pointList="344,72,344,80" />
+
+	<item itemtype="Connector" uid="Connector-1396" startpinid="Node-653-2" endpinid="LedBar-668-led23-pinP" pointList="344,32,344,32" />
+
+	<item itemtype="Connector" uid="Connector-1397" startpinid="Node-634-1" endpinid="Node-645-0" pointList="344,144,344,152" />
+
+	<item itemtype="Connector" uid="Connector-1398" startpinid="Node-645-1" endpinid="Node-622-0" pointList="344,152,344,160" />
+
+	<item itemtype="Connector" uid="Connector-1399" startpinid="Node-633-1" endpinid="Node-676-0" pointList="344,-128,344,-120" />
+
+	<item itemtype="Connector" uid="Connector-1400" startpinid="Node-643-1" endpinid="Node-620-0" pointList="344,-32,344,-24" />
+
+	<item itemtype="Connector" uid="Connector-1401" startpinid="Node-637-1" endpinid="Node-601-0" pointList="344,376,344,384" />
+
+	<item itemtype="Connector" uid="Connector-1402" startpinid="Node-640-1" endpinid="Node-604-0" pointList="344,112,344,120" />
+
+	<item itemtype="Connector" uid="Connector-1403" startpinid="Node-639-2" endpinid="LedBar-668-led74-pinP" pointList="344,440,344,440" />
+
+	<item itemtype="Connector" uid="Connector-1404" startpinid="Node-603-2" endpinid="LedBar-668-led47-pinP" pointList="344,224,344,224" />
+
+	<item itemtype="Connector" uid="Connector-1405" startpinid="Node-600-1" endpinid="Node-660-0" pointList="344,264,344,272" />
+
+	<item itemtype="Connector" uid="Connector-1406" startpinid="Node-604-1" endpinid="Node-617-0" pointList="344,120,344,128" />
+
+	<item itemtype="Connector" uid="Connector-1407" startpinid="Node-626-1" endpinid="Node-635-0" pointList="344,-8,344,0" />
+
+	<item itemtype="Connector" uid="Connector-1408" startpinid="Node-604-2" endpinid="LedBar-668-led34-pinP" pointList="344,120,344,120" />
+
+	<item itemtype="Connector" uid="Connector-1409" startpinid="Node-634-2" endpinid="LedBar-668-led37-pinP" pointList="344,144,344,144" />
+
+	<item itemtype="Connector" uid="Connector-1410" startpinid="Node-658-1" endpinid="Node-677-0" pointList="344,448,344,456" />
+
+	<item itemtype="Connector" uid="Connector-1411" startpinid="Node-639-1" endpinid="Node-658-0" pointList="344,440,344,448" />
+
+	<item itemtype="Connector" uid="Connector-1412" startpinid="Node-670-1" endpinid="Node-608-0" pointList="344,424,344,432" />
+
+	<item itemtype="Connector" uid="Connector-1413" startpinid="Node-673-2" endpinid="LedBar-668-led0-pinP" pointList="344,-148,344,-152" />
+
+	<item itemtype="Connector" uid="Connector-1733" startpinid="Node-884-1" endpinid="Node-902-0" pointList="368,264,368,272" />
+
+	<item itemtype="Connector" uid="Connector-1734" startpinid="Node-896-1" endpinid="Node-898-0" pointList="368,224,368,232" />
+
+	<item itemtype="Connector" uid="Connector-1735" startpinid="Node-850-2" endpinid="LedBar-992-led27-pinP" pointList="368,64,368,64" />
+
+	<item itemtype="Connector" uid="Connector-1736" startpinid="Node-873-2" endpinid="LedBar-992-led25-pinP" pointList="368,48,368,48" />
+
+	<item itemtype="Connector" uid="Connector-1737" startpinid="Node-919-1" endpinid="Node-957-0" pointList="368,200,368,208" />
+
+	<item itemtype="Connector" uid="Connector-1738" startpinid="Node-995-1" endpinid="Node-999-0" pointList="368,-8,368,0" />
+
+	<item itemtype="Connector" uid="Connector-1739" startpinid="Node-920-2" endpinid="LedBar-992-led62-pinP" pointList="368,344,368,344" />
+
+	<item itemtype="Connector" uid="Connector-1740" startpinid="Node-880-2" endpinid="LedBar-992-led71-pinP" pointList="368,416,368,416" />
+
+	<item itemtype="Connector" uid="Connector-1741" startpinid="Node-997-2" endpinid="LedBar-992-led49-pinP" pointList="368,240,368,240" />
+
+	<item itemtype="Connector" uid="Connector-1742" startpinid="Node-964-1" endpinid="Node-968-0" pointList="368,392,368,400" />
+
+	<item itemtype="Connector" uid="Connector-1743" startpinid="Node-939-2" endpinid="LedBar-992-led51-pinP" pointList="368,256,368,256" />
+
+	<item itemtype="Connector" uid="Connector-1744" startpinid="Node-859-1" endpinid="Node-865-0" pointList="368,24,368,32" />
+
+	<item itemtype="Connector" uid="Connector-1745" startpinid="Node-954-1" endpinid="Node-885-0" pointList="368,328,368,336" />
+
+	<item itemtype="Connector" uid="Connector-1746" startpinid="Node-967-1" endpinid="Node-943-0" pointList="368,72,368,80" />
+
+	<item itemtype="Connector" uid="Connector-1747" startpinid="Node-880-1" endpinid="Node-849-0" pointList="368,416,368,424" />
+
+	<item itemtype="Connector" uid="Connector-1748" startpinid="Node-958-1" endpinid="Node-848-0" pointList="368,-120,368,-112" />
+
+	<item itemtype="Connector" uid="Connector-1749" startpinid="Node-867-1" endpinid="Node-909-0" pointList="368,-104,368,-96" />
+
+	<item itemtype="Connector" uid="Connector-1750" startpinid="Node-884-2" endpinid="LedBar-992-led52-pinP" pointList="368,264,368,264" />
+
+	<item itemtype="Connector" uid="Connector-1751" startpinid="Node-958-2" endpinid="LedBar-992-led4-pinP" pointList="368,-120,368,-120" />
+
+	<item itemtype="Connector" uid="Connector-1752" startpinid="Node-907-2" endpinid="LedBar-992-led30-pinP" pointList="368,88,368,88" />
+
+	<item itemtype="Connector" uid="Connector-1753" startpinid="Node-871-1" endpinid="Node-875-0" pointList="368,152,368,160" />
+
+	<item itemtype="Connector" uid="Connector-1754" startpinid="Node-905-2" endpinid="LedBar-992-led54-pinP" pointList="368,280,368,280" />
+
+	<item itemtype="Connector" uid="Connector-1755" startpinid="Node-994-2" endpinid="LedBar-992-led64-pinP" pointList="368,360,368,360" />
+
+	<item itemtype="Connector" uid="Connector-1756" startpinid="Node-870-2" endpinid="LedBar-992-led3-pinP" pointList="368,-128,368,-128" />
+
+	<item itemtype="Connector" uid="Connector-1757" startpinid="Node-999-1" endpinid="Node-956-0" pointList="368,0,368,8" />
+
+	<item itemtype="Connector" uid="Connector-1758" startpinid="Node-991-0" endpinid="Node-906-0" pointList="368,-144,368,-148" />
+
+	<item itemtype="Connector" uid="Connector-1759" startpinid="Node-846-1" endpinid="Node-977-0" pointList="368,-88,368,-80" />
+
+	<item itemtype="Connector" uid="Connector-1760" startpinid="Node-923-2" endpinid="LedBar-992-led32-pinP" pointList="368,104,368,104" />
+
+	<item itemtype="Connector" uid="Connector-1761" startpinid="Node-950-2" endpinid="LedBar-992-led12-pinP" pointList="368,-56,368,-56" />
+
+	<item itemtype="Connector" uid="Connector-1762" startpinid="Node-999-2" endpinid="LedBar-992-led19-pinP" pointList="368,0,368,0" />
+
+	<item itemtype="Connector" uid="Connector-1763" startpinid="Node-915-1" endpinid="Node-987-0" pointList="368,-40,368,-32" />
+
+	<item itemtype="Connector" uid="Connector-1764" startpinid="Tunnel-887-pin" endpinid="Node-906-1" pointList="368,-160,368,-148" />
+
+	<item itemtype="Connector" uid="Connector-1765" startpinid="Node-968-2" endpinid="LedBar-992-led69-pinP" pointList="368,400,368,400" />
+
+	<item itemtype="Connector" uid="Connector-1766" startpinid="Node-977-2" endpinid="LedBar-992-led9-pinP" pointList="368,-80,368,-80" />
+
+	<item itemtype="Connector" uid="Connector-1767" startpinid="Node-899-1" endpinid="LedBar-992-led79-pinP" pointList="368,472,368,480" />
+
+	<item itemtype="Connector" uid="Connector-1768" startpinid="Node-925-2" endpinid="LedBar-992-led66-pinP" pointList="368,376,368,376" />
+
+	<item itemtype="Connector" uid="Connector-1769" startpinid="Node-893-2" endpinid="LedBar-992-led17-pinP" pointList="368,-16,368,-16" />
+
+	<item itemtype="Connector" uid="Connector-1770" startpinid="Node-982-2" endpinid="LedBar-992-led74-pinP" pointList="368,440,368,440" />
+
+	<item itemtype="Connector" uid="Connector-1771" startpinid="Node-875-2" endpinid="LedBar-992-led39-pinP" pointList="368,160,368,160" />
+
+	<item itemtype="Connector" uid="Connector-1772" startpinid="Node-898-2" endpinid="LedBar-992-led48-pinP" pointList="368,232,368,232" />
+
+	<item itemtype="Connector" uid="Connector-1773" startpinid="Node-926-2" endpinid="LedBar-992-led34-pinP" pointList="368,120,368,120" />
+
+	<item itemtype="Connector" uid="Connector-1774" startpinid="Node-930-2" endpinid="LedBar-992-led24-pinP" pointList="368,40,368,40" />
+
+	<item itemtype="Connector" uid="Connector-1775" startpinid="Node-949-2" endpinid="LedBar-992-led73-pinP" pointList="368,432,368,432" />
+
+	<item itemtype="Connector" uid="Connector-1776" startpinid="Node-919-2" endpinid="LedBar-992-led44-pinP" pointList="368,200,368,200" />
+
+	<item itemtype="Connector" uid="Connector-1777" startpinid="Node-892-1" endpinid="Node-926-0" pointList="368,112,368,120" />
+
+	<item itemtype="Connector" uid="Connector-1778" startpinid="Node-934-2" endpinid="LedBar-992-led50-pinP" pointList="368,248,368,248" />
+
+	<item itemtype="Connector" uid="Connector-1779" startpinid="Node-843-2" endpinid="LedBar-992-led75-pinP" pointList="368,448,368,448" />
+
+	<item itemtype="Connector" uid="Connector-1780" startpinid="Node-848-1" endpinid="Node-867-0" pointList="368,-112,368,-104" />
+
+	<item itemtype="Connector" uid="Connector-1781" startpinid="Node-903-1" endpinid="Node-950-0" pointList="368,-64,368,-56" />
+
+	<item itemtype="Connector" uid="Connector-1782" startpinid="Node-890-1" endpinid="Node-915-0" pointList="368,-48,368,-40" />
+
+	<item itemtype="Connector" uid="Connector-1783" startpinid="Node-957-1" endpinid="Node-904-0" pointList="368,208,368,216" />
+
+	<item itemtype="Connector" uid="Connector-1784" startpinid="Node-994-1" endpinid="Node-868-0" pointList="368,360,368,368" />
+
+	<item itemtype="Connector" uid="Connector-1785" startpinid="Node-890-2" endpinid="LedBar-992-led13-pinP" pointList="368,-48,368,-48" />
+
+	<item itemtype="Connector" uid="Connector-1786" startpinid="Node-950-1" endpinid="Node-890-0" pointList="368,-56,368,-48" />
+
+	<item itemtype="Connector" uid="Connector-1787" startpinid="Node-987-2" endpinid="LedBar-992-led15-pinP" pointList="368,-32,368,-32" />
+
+	<item itemtype="Connector" uid="Connector-1788" startpinid="Node-991-1" endpinid="Node-984-0" pointList="368,-144,368,-136" />
+
+	<item itemtype="Connector" uid="Connector-1789" startpinid="Node-982-1" endpinid="Node-843-0" pointList="368,440,368,448" />
+
+	<item itemtype="Connector" uid="Connector-1790" startpinid="Node-995-2" endpinid="LedBar-992-led18-pinP" pointList="368,-8,368,-8" />
+
+	<item itemtype="Connector" uid="Connector-1791" startpinid="Node-882-1" endpinid="Node-919-0" pointList="368,192,368,200" />
+
+	<item itemtype="Connector" uid="Connector-1792" startpinid="Node-868-1" endpinid="Node-925-0" pointList="368,368,368,376" />
+
+	<item itemtype="Connector" uid="Connector-1793" startpinid="Node-900-2" endpinid="LedBar-992-led67-pinP" pointList="368,384,368,384" />
+
+	<item itemtype="Connector" uid="Connector-1794" startpinid="Node-865-2" endpinid="LedBar-992-led23-pinP" pointList="368,32,368,32" />
+
+	<item itemtype="Connector" uid="Connector-1795" startpinid="Node-960-2" endpinid="LedBar-992-led70-pinP" pointList="368,408,368,408" />
+
+	<item itemtype="Connector" uid="Connector-1796" startpinid="Node-854-1" endpinid="Node-921-0" pointList="368,312,368,320" />
+
+	<item itemtype="Connector" uid="Connector-1797" startpinid="Node-977-1" endpinid="Node-969-0" pointList="368,-80,368,-72" />
+
+	<item itemtype="Connector" uid="Connector-1798" startpinid="Node-1000-1" endpinid="Node-927-0" pointList="368,136,368,144" />
+
+	<item itemtype="Connector" uid="Connector-1799" startpinid="Node-870-1" endpinid="Node-958-0" pointList="368,-128,368,-120" />
+
+	<item itemtype="Connector" uid="Connector-1800" startpinid="Node-969-1" endpinid="Node-903-0" pointList="368,-72,368,-64" />
+
+	<item itemtype="Connector" uid="Connector-1801" startpinid="Node-943-1" endpinid="Node-907-0" pointList="368,80,368,88" />
+
+	<item itemtype="Connector" uid="Connector-1802" startpinid="Node-968-1" endpinid="Node-960-0" pointList="368,400,368,408" />
+
+	<item itemtype="Connector" uid="Connector-1803" startpinid="Node-909-1" endpinid="Node-846-0" pointList="368,-96,368,-88" />
+
+	<item itemtype="Connector" uid="Connector-1804" startpinid="Node-965-1" endpinid="Node-850-0" pointList="368,56,368,64" />
+
+	<item itemtype="Connector" uid="Connector-1805" startpinid="Node-938-1" endpinid="Node-872-0" pointList="368,176,368,184" />
+
+	<item itemtype="Connector" uid="Connector-1806" startpinid="Node-920-1" endpinid="Node-993-0" pointList="368,344,368,352" />
+
+	<item itemtype="Connector" uid="Connector-1807" startpinid="Node-883-1" endpinid="Node-845-0" pointList="368,288,368,296" />
+
+	<item itemtype="Connector" uid="Connector-1808" startpinid="Node-859-2" endpinid="LedBar-992-led22-pinP" pointList="368,24,368,24" />
+
+	<item itemtype="Connector" uid="Connector-1809" startpinid="Node-954-2" endpinid="LedBar-992-led60-pinP" pointList="368,328,368,328" />
+
+	<item itemtype="Connector" uid="Connector-1810" startpinid="Node-934-1" endpinid="Node-939-0" pointList="368,248,368,256" />
+
+	<item itemtype="Connector" uid="Connector-1811" startpinid="Node-953-1" endpinid="Node-899-0" pointList="368,464,368,472" />
+
+	<item itemtype="Connector" uid="Connector-1812" startpinid="Node-889-1" endpinid="Node-953-0" pointList="368,456,368,464" />
+
+	<item itemtype="Connector" uid="Connector-1813" startpinid="Node-875-1" endpinid="Node-912-0" pointList="368,160,368,168" />
+
+	<item itemtype="Connector" uid="Connector-1814" startpinid="Node-943-2" endpinid="LedBar-992-led29-pinP" pointList="368,80,368,80" />
+
+	<item itemtype="Connector" uid="Connector-1815" startpinid="Node-902-1" endpinid="Node-905-0" pointList="368,272,368,280" />
+
+	<item itemtype="Connector" uid="Connector-1816" startpinid="Node-912-2" endpinid="LedBar-992-led40-pinP" pointList="368,168,368,168" />
+
+	<item itemtype="Connector" uid="Connector-1817" startpinid="Node-845-1" endpinid="Node-840-0" pointList="368,296,368,304" />
+
+	<item itemtype="Connector" uid="Connector-1818" startpinid="Node-930-1" endpinid="Node-873-0" pointList="368,40,368,48" />
+
+	<item itemtype="Connector" uid="Connector-1819" startpinid="Node-997-1" endpinid="Node-934-0" pointList="368,240,368,248" />
+
+	<item itemtype="Connector" uid="Connector-1820" startpinid="Node-894-2" endpinid="LedBar-992-led16-pinP" pointList="368,-24,368,-24" />
+
+	<item itemtype="Connector" uid="Connector-1821" startpinid="Node-991-2" endpinid="LedBar-992-led1-pinP" pointList="368,-144,368,-144" />
+
+	<item itemtype="Connector" uid="Connector-1822" startpinid="Node-953-2" endpinid="LedBar-992-led77-pinP" pointList="368,464,368,464" />
+
+	<item itemtype="Connector" uid="Connector-1823" startpinid="Node-840-2" endpinid="LedBar-992-led57-pinP" pointList="368,304,368,304" />
+
+	<item itemtype="Connector" uid="Connector-1824" startpinid="Node-902-2" endpinid="LedBar-992-led53-pinP" pointList="368,272,368,272" />
+
+	<item itemtype="Connector" uid="Connector-1825" startpinid="Node-905-1" endpinid="Node-883-0" pointList="368,280,368,288" />
+
+	<item itemtype="Connector" uid="Connector-1826" startpinid="Node-962-1" endpinid="Node-1000-0" pointList="368,128,368,136" />
+
+	<item itemtype="Connector" uid="Connector-1827" startpinid="Node-987-1" endpinid="Node-894-0" pointList="368,-32,368,-24" />
+
+	<item itemtype="Connector" uid="Connector-1828" startpinid="Node-949-1" endpinid="Node-982-0" pointList="368,432,368,440" />
+
+	<item itemtype="Connector" uid="Connector-1829" startpinid="Node-882-2" endpinid="LedBar-992-led43-pinP" pointList="368,192,368,192" />
+
+	<item itemtype="Connector" uid="Connector-1830" startpinid="Node-956-2" endpinid="LedBar-992-led20-pinP" pointList="368,8,368,8" />
+
+	<item itemtype="Connector" uid="Connector-1831" startpinid="Node-993-1" endpinid="Node-994-0" pointList="368,352,368,360" />
+
+	<item itemtype="Connector" uid="Connector-1832" startpinid="Node-923-1" endpinid="Node-892-0" pointList="368,104,368,112" />
+
+	<item itemtype="Connector" uid="Connector-1833" startpinid="Node-904-2" endpinid="LedBar-992-led46-pinP" pointList="368,216,368,216" />
+
+	<item itemtype="Connector" uid="Connector-1834" startpinid="Node-866-1" endpinid="Node-859-0" pointList="368,16,368,24" />
+
+	<item itemtype="Connector" uid="Connector-1835" startpinid="Node-903-2" endpinid="LedBar-992-led11-pinP" pointList="368,-64,368,-64" />
+
+	<item itemtype="Connector" uid="Connector-1836" startpinid="Node-872-1" endpinid="Node-882-0" pointList="368,184,368,192" />
+
+	<item itemtype="Connector" uid="Connector-1837" startpinid="Node-871-2" endpinid="LedBar-992-led38-pinP" pointList="368,152,368,152" />
+
+	<item itemtype="Connector" uid="Connector-1838" startpinid="Node-964-2" endpinid="LedBar-992-led68-pinP" pointList="368,392,368,392" />
+
+	<item itemtype="Connector" uid="Connector-1839" startpinid="Node-893-1" endpinid="Node-995-0" pointList="368,-16,368,-8" />
+
+	<item itemtype="Connector" uid="Connector-1840" startpinid="Node-840-1" endpinid="Node-854-0" pointList="368,304,368,312" />
+
+	<item itemtype="Connector" uid="Connector-1841" startpinid="Node-896-2" endpinid="LedBar-992-led47-pinP" pointList="368,224,368,224" />
+
+	<item itemtype="Connector" uid="Connector-1842" startpinid="Node-906-2" endpinid="LedBar-992-led0-pinP" pointList="368,-148,368,-152" />
+
+	<item itemtype="Connector" uid="Connector-1843" startpinid="Node-852-1" endpinid="Node-923-0" pointList="368,96,368,104" />
+
+	<item itemtype="Connector" uid="Connector-1844" startpinid="Node-984-1" endpinid="Node-870-0" pointList="368,-136,368,-128" />
+
+	<item itemtype="Connector" uid="Connector-1845" startpinid="Node-843-1" endpinid="Node-889-0" pointList="368,448,368,456" />
+
+	<item itemtype="Connector" uid="Connector-1846" startpinid="Node-926-1" endpinid="Node-962-0" pointList="368,120,368,128" />
+
+	<item itemtype="Connector" uid="Connector-1847" startpinid="Node-927-1" endpinid="Node-871-0" pointList="368,144,368,152" />
+
+	<item itemtype="Connector" uid="Connector-1848" startpinid="Node-885-1" endpinid="Node-920-0" pointList="368,336,368,344" />
+
+	<item itemtype="Connector" uid="Connector-1849" startpinid="Node-925-1" endpinid="Node-900-0" pointList="368,376,368,384" />
+
+	<item itemtype="Connector" uid="Connector-1850" startpinid="Node-852-2" endpinid="LedBar-992-led31-pinP" pointList="368,96,368,96" />
+
+	<item itemtype="Connector" uid="Connector-1851" startpinid="Node-960-1" endpinid="Node-880-0" pointList="368,408,368,416" />
+
+	<item itemtype="Connector" uid="Connector-1852" startpinid="Node-962-2" endpinid="LedBar-992-led35-pinP" pointList="368,128,368,128" />
+
+	<item itemtype="Connector" uid="Connector-1853" startpinid="Node-938-2" endpinid="LedBar-992-led41-pinP" pointList="368,176,368,176" />
+
+	<item itemtype="Connector" uid="Connector-1854" startpinid="Node-907-1" endpinid="Node-852-0" pointList="368,88,368,96" />
+
+	<item itemtype="Connector" uid="Connector-1855" startpinid="Node-892-2" endpinid="LedBar-992-led33-pinP" pointList="368,112,368,112" />
+
+	<item itemtype="Connector" uid="Connector-1856" startpinid="Node-850-1" endpinid="Node-967-0" pointList="368,64,368,72" />
+
+	<item itemtype="Connector" uid="Connector-1857" startpinid="Node-927-2" endpinid="LedBar-992-led37-pinP" pointList="368,144,368,144" />
+
+	<item itemtype="Connector" uid="Connector-1858" startpinid="Node-939-1" endpinid="Node-884-0" pointList="368,256,368,264" />
+
+	<item itemtype="Connector" uid="Connector-1859" startpinid="Node-885-2" endpinid="LedBar-992-led61-pinP" pointList="368,336,368,336" />
+
+	<item itemtype="Connector" uid="Connector-1860" startpinid="Node-883-2" endpinid="LedBar-992-led55-pinP" pointList="368,288,368,288" />
+
+	<item itemtype="Connector" uid="Connector-1861" startpinid="Node-848-2" endpinid="LedBar-992-led5-pinP" pointList="368,-112,368,-112" />
+
+	<item itemtype="Connector" uid="Connector-1862" startpinid="Node-894-1" endpinid="Node-893-0" pointList="368,-24,368,-16" />
+
+	<item itemtype="Connector" uid="Connector-1863" startpinid="Node-866-2" endpinid="LedBar-992-led21-pinP" pointList="368,16,368,16" />
+
+	<item itemtype="Connector" uid="Connector-1864" startpinid="Node-1000-2" endpinid="LedBar-992-led36-pinP" pointList="368,136,368,136" />
+
+	<item itemtype="Connector" uid="Connector-1865" startpinid="Node-967-2" endpinid="LedBar-992-led28-pinP" pointList="368,72,368,72" />
+
+	<item itemtype="Connector" uid="Connector-1866" startpinid="Node-956-1" endpinid="Node-866-0" pointList="368,8,368,16" />
+
+	<item itemtype="Connector" uid="Connector-1867" startpinid="Node-899-2" endpinid="LedBar-992-led78-pinP" pointList="368,472,368,472" />
+
+	<item itemtype="Connector" uid="Connector-1868" startpinid="Node-921-1" endpinid="Node-954-0" pointList="368,320,368,328" />
+
+	<item itemtype="Connector" uid="Connector-1869" startpinid="Node-984-2" endpinid="LedBar-992-led2-pinP" pointList="368,-136,368,-136" />
+
+	<item itemtype="Connector" uid="Connector-1870" startpinid="Node-849-1" endpinid="Node-949-0" pointList="368,424,368,432" />
+
+	<item itemtype="Connector" uid="Connector-1871" startpinid="Node-957-2" endpinid="LedBar-992-led45-pinP" pointList="368,208,368,208" />
+
+	<item itemtype="Connector" uid="Connector-1872" startpinid="Node-915-2" endpinid="LedBar-992-led14-pinP" pointList="368,-40,368,-40" />
+
+	<item itemtype="Connector" uid="Connector-1873" startpinid="Node-846-2" endpinid="LedBar-992-led8-pinP" pointList="368,-88,368,-88" />
+
+	<item itemtype="Connector" uid="Connector-1874" startpinid="Node-854-2" endpinid="LedBar-992-led58-pinP" pointList="368,312,368,312" />
+
+	<item itemtype="Connector" uid="Connector-1875" startpinid="Node-909-2" endpinid="LedBar-992-led7-pinP" pointList="368,-96,368,-96" />
+
+	<item itemtype="Connector" uid="Connector-1876" startpinid="Node-872-2" endpinid="LedBar-992-led42-pinP" pointList="368,184,368,184" />
+
+	<item itemtype="Connector" uid="Connector-1877" startpinid="Node-900-1" endpinid="Node-964-0" pointList="368,384,368,392" />
+
+	<item itemtype="Connector" uid="Connector-1878" startpinid="Node-849-2" endpinid="LedBar-992-led72-pinP" pointList="368,424,368,424" />
+
+	<item itemtype="Connector" uid="Connector-1879" startpinid="Node-965-2" endpinid="LedBar-992-led26-pinP" pointList="368,56,368,56" />
+
+	<item itemtype="Connector" uid="Connector-1880" startpinid="Node-845-2" endpinid="LedBar-992-led56-pinP" pointList="368,296,368,296" />
+
+	<item itemtype="Connector" uid="Connector-1881" startpinid="Node-867-2" endpinid="LedBar-992-led6-pinP" pointList="368,-104,368,-104" />
+
+	<item itemtype="Connector" uid="Connector-1882" startpinid="Node-921-2" endpinid="LedBar-992-led59-pinP" pointList="368,320,368,320" />
+
+	<item itemtype="Connector" uid="Connector-1883" startpinid="Node-898-1" endpinid="Node-997-0" pointList="368,232,368,240" />
+
+	<item itemtype="Connector" uid="Connector-1884" startpinid="Node-868-2" endpinid="LedBar-992-led65-pinP" pointList="368,368,368,368" />
+
+	<item itemtype="Connector" uid="Connector-1885" startpinid="Node-969-2" endpinid="LedBar-992-led10-pinP" pointList="368,-72,368,-72" />
+
+	<item itemtype="Connector" uid="Connector-1886" startpinid="Node-904-1" endpinid="Node-896-0" pointList="368,216,368,224" />
+
+	<item itemtype="Connector" uid="Connector-1887" startpinid="Node-912-1" endpinid="Node-938-0" pointList="368,168,368,176" />
+
+	<item itemtype="Connector" uid="Connector-1888" startpinid="Node-865-1" endpinid="Node-930-0" pointList="368,32,368,40" />
+
+	<item itemtype="Connector" uid="Connector-1889" startpinid="Node-889-2" endpinid="LedBar-992-led76-pinP" pointList="368,456,368,456" />
+
+	<item itemtype="Connector" uid="Connector-1890" startpinid="Node-873-1" endpinid="Node-965-0" pointList="368,48,368,56" />
+
+	<item itemtype="Connector" uid="Connector-1891" startpinid="Node-993-2" endpinid="LedBar-992-led63-pinP" pointList="368,352,368,352" />
+
+	<item itemtype="Connector" uid="Connector-1895" startpinid="KeyPad-1013-Pin2" endpinid="Tunnel-1010-pin" pointList="-236,-268,-236,-268" />
+
+	<item itemtype="Connector" uid="Connector-1896" startpinid="KeyPad-1013-Pin0" endpinid="Tunnel-1011-pin" pointList="-220,-300,-220,-300" />
+
+	<item itemtype="Connector" uid="Connector-1897" startpinid="KeyPad-1013-Pin1" endpinid="Tunnel-1012-pin" pointList="-220,-284,-220,-284" />
+
+	<item itemtype="Connector" uid="Connector-1898" startpinid="Tunnel-1016-pin" endpinid="Push-1014-pinP0" pointList="-160,-304,-160,-304" />
+
+	<item itemtype="Connector" uid="Connector-1899" startpinid="Push-1014-switch0pinN" endpinid="Tunnel-1015-pin" pointList="-128,-304,-128,-304" />
+
+	<item itemtype="Connector" uid="Connector-1900" startpinid="Tunnel-1017-pin" endpinid="Mega-1-46" pointList="300,-644,332,-644" />
+
+	<item itemtype="Connector" uid="Connector-1901" startpinid="Mega-1-21" endpinid="Tunnel-1018-pin" pointList="492,-700,492,-700" />
+
+	<item itemtype="Connector" uid="Connector-1902" startpinid="Mega-1-20" endpinid="Tunnel-1020-pin" pointList="492,-692,492,-692" />
+
+	<item itemtype="Connector" uid="Connector-1903" startpinid="Mega-1-19" endpinid="Tunnel-1019-pin" pointList="492,-684,492,-684" />
+
+	<item itemtype="Connector" uid="Connector-1904" startpinid="Tunnel-1023-pin" endpinid="Mega-1-12" pointList="496,-628,492,-628" />
+
+	<item itemtype="Connector" uid="Connector-1905" startpinid="8x8_led_595-1022-DI" endpinid="Tunnel-1024-pin" pointList="-344,-324,-344,-328" />
+
+	<item itemtype="Connector" uid="Connector-1906" startpinid="Tunnel-1025-pin" endpinid="Mega-1-11" pointList="500,-620,492,-620" />
+
+	<item itemtype="Connector" uid="Connector-1907" startpinid="Tunnel-1027-pin" endpinid="Mega-1-10" pointList="500,-612,492,-612" />
+
+	<item itemtype="Connector" uid="Connector-1909" startpinid="Tunnel-1028-pin" endpinid="8x8_led_595-1022-RCLK" pointList="-328,-332,-328,-324" />
+
+	<item itemtype="Connector" uid="Connector-1908" startpinid="Tunnel-1026-pin" endpinid="8x8_led_595-1022-SCLK" pointList="-336,-332,-336,-324" />
+	<item itemtype="Connector" uid="Connector-9999" startpinid="Mega-1-22" endpinid="Image-999-pin" pointList="492,-708,492,-708" />
+
+</circuit>
